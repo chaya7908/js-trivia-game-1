@@ -256,7 +256,7 @@ function startGame() {
   },21000);
 
 
-  questions.forEach((question, index) => {
+  questions.forEach((question) => {
     const card = document.createElement('div');
     card.className = 'card';
     card.id = question.questionId;
