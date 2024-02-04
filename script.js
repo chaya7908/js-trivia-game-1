@@ -220,13 +220,13 @@ function playGameSound(type) {
   let path = '';
   switch (type) {
     case 'success':
-      path = './sounds/win-2.mp3';
+      path = './sounds/win.mp3';
       break;
     case 'wrong':
-      path = './sounds/wrong-2.mp3';
+      path = './sounds/wrong.mp3';
       break;
     case 'flip':
-      path = './sounds/tada-1.mp3';
+      path = './sounds/tada.mp3';
       break;
     default:
       break;
