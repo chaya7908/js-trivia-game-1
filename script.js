@@ -2,115 +2,107 @@ const questions = [
   {
     questionId: 'question-1',
     answers: [
-      { answer: "תשובה 1", isCorrect: false },
-      { answer: "תשובה 2", isCorrect: true },
-      { answer: "תשובה 3", isCorrect: false }
+      { answer: "המרכזת", isCorrect: true },
+      { answer: "המורה תעיזי", isCorrect: false },
+      { answer: "המורה עסיס", isCorrect: false }
     ]
   },
   {
     questionId: 'question-2',
     answers: [
-      { answer: "תשובה 1", isCorrect: false },
-      { answer: "תשובה 2", isCorrect: true },
-      { answer: "תשובה 3", isCorrect: false }
+      { answer: "המורה חסיד", isCorrect: true },
+      { answer: "המורה אדלשטיין", isCorrect: false },
+      { answer: "המורה נוקראי", isCorrect: false }
     ]
   },
   {
     questionId: 'question-3',
     answers: [
-      { answer: "תשובה 1", isCorrect: false },
-      { answer: "תשובה 2", isCorrect: true },
-      { answer: "תשובה 3", isCorrect: false }
+      { answer: "המורה הררי רפול", isCorrect: true },
+      { answer: "המורה אדלשטיין", isCorrect: false },
+      { answer: "המורה יונה", isCorrect: false }
     ]
   },
   {
     questionId: 'question-4',
     answers: [
-      { answer: "תשובה 1", isCorrect: false },
-      { answer: "תשובה 2", isCorrect: true },
-      { answer: "תשובה 3", isCorrect: false }
+      { answer: "המורה תשובה", isCorrect: false },
+      { answer: "המורה בן ששון", isCorrect: false },
+      { answer: "המורה נוקראי", isCorrect: true },
     ]
   },
   {
     questionId: 'question-5',
     answers: [
-      { answer: "תשובה 1", isCorrect: false },
-      { answer: "תשובה 2", isCorrect: true },
-      { answer: "תשובה 3", isCorrect: false }
+      { answer: "המרכזת", isCorrect: false },
+      { answer: "המורה בן ששון", isCorrect: true },
+      { answer: "המורה מאושר", isCorrect: false }
     ]
   },
   {
     questionId: 'question-6',
     answers: [
-      { answer: "תשובה 1", isCorrect: false },
-      { answer: "תשובה 2", isCorrect: true },
-      { answer: "תשובה 3", isCorrect: false }
+      { answer: "המרכזת", isCorrect: false },
+      { answer: "המורה תעיזי", isCorrect: false },
+      { answer: "המורה מאושר", isCorrect: true }
     ]
   },
   {
     questionId: 'question-7',
     answers: [
-      { answer: "תשובה 1", isCorrect: false },
-      { answer: "תשובה 2", isCorrect: true },
-      { answer: "תשובה 3", isCorrect: false }
+      { answer: "המורה יונה", isCorrect: false },
+      { answer: "המורה אדלשטיין", isCorrect: true },
+      { answer: "המורה חסיד", isCorrect: false }
     ]
   },
   {
     questionId: 'question-8',
     answers: [
-      { answer: "תשובה 1", isCorrect: false },
-      { answer: "תשובה 2", isCorrect: true },
-      { answer: "תשובה 3", isCorrect: false }
+      { answer: "המורה רבי", isCorrect: false },
+      { answer: "המורה יונה", isCorrect: false },
+      { answer: "המורה עסיס", isCorrect: true }
     ]
   },
   {
     questionId: 'question-9',
     answers: [
-      { answer: "תשובה 1", isCorrect: false },
-      { answer: "תשובה 2", isCorrect: true },
-      { answer: "תשובה 3", isCorrect: false }
+      { answer: "המורה רבי", isCorrect: true },
+      { answer: "המורה תעיזי", isCorrect: false },
+      { answer: "המורה נוקראי", isCorrect: false }
     ]
   },
   {
     questionId: 'question-10',
     answers: [
-      { answer: "תשובה 1", isCorrect: false },
-      { answer: "תשובה 2", isCorrect: true },
-      { answer: "תשובה 3", isCorrect: false }
+      { answer: "המורה עסיס", isCorrect: false },
+      { answer: "המורה תשובה", isCorrect: true },
+      { answer: "המורה בן ששון", isCorrect: false }
     ]
   },
   {
     questionId: 'question-11',
     answers: [
-      { answer: "תשובה 1", isCorrect: false },
-      { answer: "תשובה 2", isCorrect: true },
-      { answer: "תשובה 3", isCorrect: false }
+      { answer: "המורה רבי", isCorrect: false },
+      { answer: "המורה תשובה", isCorrect: false },
+      { answer: "המורה מאירי", isCorrect: true }
     ]
   },
   {
     questionId: 'question-12',
     answers: [
-      { answer: "תשובה 1", isCorrect: false },
-      { answer: "תשובה 2", isCorrect: true },
-      { answer: "תשובה 3", isCorrect: false }
+      { answer: "המורה אדלשטיין", isCorrect: false },
+      { answer: "המורה נוקראי", isCorrect: false },
+      { answer: "המורה יונה", isCorrect: true },
     ]
   },
   {
     questionId: 'question-13',
     answers: [
-      { answer: "תשובה 1", isCorrect: false },
-      { answer: "תשובה 2", isCorrect: true },
-      { answer: "תשובה 3", isCorrect: false }
+      { answer: "המורה עסיס", isCorrect: false },
+      { answer: "המורה תעיזי", isCorrect: true },
+      { answer: "המורה מאושר", isCorrect: false }
     ]
   },
-  {
-    questionId: 'question-14',
-    answers: [
-      { answer: "תשובה 1", isCorrect: false },
-      { answer: "תשובה 2", isCorrect: true },
-      { answer: "תשובה 3", isCorrect: false }
-    ]
-  }
 ];
 
 const gameStartSound = new Audio('./sounds/start-game.mp3');

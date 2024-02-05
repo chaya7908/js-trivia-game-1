@@ -16,16 +16,15 @@ body {
 
 .grid-container {
   display: grid;
-  grid-template-columns: repeat(7, 1fr);
   /* Display 7 items on each row */
+  grid-template-columns: repeat(7, 1fr);
   gap: 20px;
-  padding: 20px;
   width: calc(100vw - 40px);
-  height: calc(100vh - 40px);
+  height: calc(100vh - 80px);
 }
 
 .grid-container.animate {
-  animation: slideIn 10s ease-in-out, fadeIn 1s 9.9s, dance 0.73s 10.4s infinite;
+  animation: slideIn 10s ease-in-out, fadeIn 1s 9.9s, dance 0.65s 10.5s infinite;
 }
 
 @keyframes slideIn {
@@ -73,7 +72,7 @@ body {
 
 .card.active {
   border: 3px solid white;
-  transform: scale(1.5);
+  transform: scale(1.3);
   z-index: 10;
 }
 
@@ -115,7 +114,9 @@ body {
 }
 
 .card-face img {
-  width: 95%;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
   border-radius: 8px;
 }
 
