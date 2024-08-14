@@ -4,7 +4,7 @@ body {
   justify-content: center;
   height: 100vh;
   margin: 0;
-  background-color: #704b5d;
+  background-color: black;
 }
 
 .backdrop {
@@ -17,10 +17,10 @@ body {
 .grid-container {
   display: grid;
   /* Display 7 items on each row */
-  grid-template-columns: repeat(7, 1fr);
+  grid-template-columns: repeat(10, 1fr);
   gap: 20px;
-  width: calc(100vw - 40px);
-  height: calc(100vh - 80px);
+  width: calc(100vw - 150px);
+  height: calc(100vh - 120px);
 }
 
 .grid-container.animate {
@@ -63,16 +63,14 @@ body {
 /* CARD */
 .card {
   cursor: pointer;
-  background-color: #e39325;
   padding: 5px;
   border-radius: 8px;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
   transition: transform 0.5s;
 }
 
 .card.active {
-  border: 3px solid white;
-  transform: scale(1.3);
+  border: 3px solid #c02235;
+  transform: scale(2.3);
   z-index: 10;
 }
 
@@ -81,6 +79,9 @@ body {
   height: 100%;
   transform-style: preserve-3d;
   transition: transform 0.5s;
+}
+.card-container:hover {
+  transform: scale(1.7);
 }
 
 .card.flipped .card-container {
@@ -101,23 +102,41 @@ body {
 }
 
 .card-background {
-  background-color: white;
 }
 
+
 .card-background img {
-  width: 100%;
+  height: 85%;
   border-radius: 8px;
+}
+
+.card-background img.text-image {
+  position: absolute;
+  /*filter: sepia(1) saturate(10000%) hue-rotate(180deg);*/
+  filter: invert(1) brightness(10000%);
+  transition: transform 0.5s ease-in-out;
+  height: 32%;
+  top: 17px;
 }
 
 .card-face {
+  background-color: white;
   transform: rotateY(180deg);
 }
-
-.card-face img {
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-  border-radius: 8px;
+.card-face .question-text, .card-face .question-answer {
+  margin: 0 20px;
+  color: #c02235;
+  text-align: center;
+  font-size: 12px;
+}
+.card-face .question-answer {
+  display: none;
+}
+.card-face:hover .question-text {
+  display: none;
+}
+.card-face:hover .question-answer {
+  display: block;
 }
 
 /* ANSERS */
@@ -135,7 +154,7 @@ body {
 }
 
 .answers-popup-content {
-  background-color: #3b2630;
+  background-color: black;
   padding: 40px;
   border-radius: 10px;
   color: white;
@@ -152,7 +171,7 @@ body {
 .answer {
   background-color: white;
   border-radius: 8px;
-  color: #e39325;
+  color: #c02235;
   text-align: center;
   font-size: 22px;
   font-weight: bolder;
@@ -161,7 +180,7 @@ body {
 }
 
 .answer:hover {
-  background-color: #e39325;
+  background-color: #c02235;
   color: white;
   scale: 1.05;
 }
@@ -212,4 +231,31 @@ body {
 /* GENERAL */
 .hidden {
   display: none;
+}
+
+/* Zoom Out Animation */
+.zoom-out {
+  animation: zoomOut 4s infinite;
+  animation-delay: var(--random-delay);
+}
+
+@keyframes zoomOut {
+  0% { transform: scale(1) }
+  100% { transform: scale(1) }
+  50% { transform: scale(1.1) }
+}
+
+/* Swing Animation */
+.swing {
+  animation: swing 6s infinite;
+  animation-delay: var(--random-delay);
+}
+
+@keyframes swing {
+  0% { transform: rotate(0deg) }
+  15% { transform: rotate(-15deg) }
+  30% { transform: rotate(0deg) }
+  45% { transform: rotate(15deg) }
+  60% { transform: rotate(0deg) }
+  100% { transform: rotate(0deg) }
 }
