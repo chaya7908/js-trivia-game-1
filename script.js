@@ -2,6 +2,7 @@ const TIME_TO_DISPLAY_Q_BEFORE_A = 6000;
 const TIME_TO_WAIT_BEFORE_CHECK_ANSWER = 6000;
 const TIME_TO_WAIT_BEFORE_CLOSE_CORRECT_ANSWER = 4000;
 const TIME_TO_WAIT_BEFORE_CLOSE_WRONG_ANSWER = 2000;
+const TIMEOUT_FOR_SINGLE_QUESTION = 10000;
 const questions = [
   {
     questionId: 'question-1',
@@ -369,6 +370,8 @@ const gameStartSound = new Audio('./sounds/start-game.mp3');
 const gameBgSound = new Audio('./sounds/game.mp3');
 gameBgSound.loop = true;
 
+let answerTimeOut;
+
 function handleCardClick(questionId) {
   const card = document.getElementById(questionId);
   card.classList.add('active');
@@ -378,10 +381,18 @@ function handleCardClick(questionId) {
 
   setTimeout(() => {
     showAnswersPopup(questionId);
+
+    // question timeout
+    answerTimeOut = setTimeout(() => {
+      toggleAnswersPopup(false);
+      toggleFlipCard(questionId, false);
+      card.classList.remove('active');
+    }, TIMEOUT_FOR_SINGLE_QUESTION)
   }, TIME_TO_DISPLAY_Q_BEFORE_A);
 }
 
 function handleAnswerClick(questionId, isCorrect, element) {
+  clearTimeout(answerTimeOut);
   const card = document.getElementById(questionId);
 
   element.classList.add('scale');
