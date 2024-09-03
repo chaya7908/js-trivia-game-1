@@ -369,8 +369,9 @@ let answerTimeOut;
 
 function handleCardClick(questionId) {
   const card = document.getElementById(questionId);
+  if (card.classList.contains('flipped')) return;
+  
   card.classList.add('active');
-
   toggleFreezScreen(true);
   toggleFlipCard(questionId, true);
 
@@ -387,6 +388,8 @@ function handleCardClick(questionId) {
 }
 
 function handleAnswerClick(questionId, isCorrect, element) {
+  toggleFreezScreen(true);
+
   clearTimeout(answerTimeOut);
   const card = document.getElementById(questionId);
 
@@ -405,6 +408,7 @@ function handleAnswerClick(questionId, isCorrect, element) {
       setTimeout(() => {
         toggleAnswersPopup(false);
         card.classList.remove('active');
+        toggleFreezScreen(false);
       }, TIME_TO_WAIT_BEFORE_CLOSE_CORRECT_ANSWER);
     } else {
       playGameSound('wrong');
@@ -413,6 +417,7 @@ function handleAnswerClick(questionId, isCorrect, element) {
         toggleAnswersPopup(false);
         card.classList.remove('active');
         toggleFlipCard(questionId, false);
+        toggleFreezScreen(false);
       }, TIME_TO_WAIT_BEFORE_CLOSE_WRONG_ANSWER);
     }
   }, TIME_TO_WAIT_BEFORE_CHECK_ANSWER);

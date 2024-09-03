@@ -9,7 +9,7 @@ body {
 
 .backdrop {
   position: absolute;
-  z-index: 100;
+  z-index: 9000;
   width: 100vw;
   height: 100vh;
 }
@@ -20,7 +20,7 @@ body {
   grid-template-columns: repeat(10, 1fr);
   gap: 20px;
   width: calc(100vw - 150px);
-  height: calc(100vh - 120px);
+  height: calc(100vh - 180px);
 }
 
 .grid-container.animate {
