@@ -3,365 +3,360 @@ const TIME_TO_WAIT_BEFORE_CHECK_ANSWER = 6000;
 const TIME_TO_WAIT_BEFORE_CLOSE_CORRECT_ANSWER = 4000;
 const TIME_TO_WAIT_BEFORE_CLOSE_WRONG_ANSWER = 2000;
 const TIMEOUT_FOR_SINGLE_QUESTION = 10000;
+
+
 const questions = [
   {
-    questionId: 'question-1',
-    question: 'מה השם שלך?',
+    questionId: 1,
+    question: "מי המורה שבתמונה להשיג תמונה",
     answers: [
-      { answer: "המרכזת", isCorrect: true },
-      { answer: "המורה תעיזי", isCorrect: false },
-      { answer: "המורה עסיס", isCorrect: false }
+      { answer: "המנהלת", isCorrect: true },
+      { answer: "המורה חני יאקאב", isCorrect: false },
+      { answer: "המורה חוי שפירא", isCorrect: false }
     ]
   },
   {
-    questionId: 'question-2',
-    question: 'באיזה שנה נוסדה המדינה?',
+    questionId: 2,
+    question: "איזו מורה היתה כאן בשנה הראשונה",
     answers: [
-      { answer: "1948", isCorrect: true },
-      { answer: "1967", isCorrect: false },
-      { answer: "1956", isCorrect: false }
+      { answer: "המורה חני פלם", isCorrect: true },
+      { answer: "המורה חני יאקאב", isCorrect: false },
+      { answer: "המורה רחל היזרעאלי", isCorrect: false }
     ]
   },
   {
-    questionId: 'question-3',
-    question: 'מה עיר הבירה של ישראל?',
+    questionId: 3,
+    question: "מתי שונה הכינוי בלוגו מ'תיכון' ל'סמינר'",
     answers: [
-      { answer: "ירושלים", isCorrect: true },
-      { answer: "תל אביב", isCorrect: false },
-      { answer: "חיפה", isCorrect: false }
+      { answer: "בחודש טבת שנה שעברה", isCorrect: true },
+      { answer: "בתחילת שנה שעברה", isCorrect: false },
+      { answer: "בחופש האחרון", isCorrect: false }
     ]
   },
   {
-    questionId: 'question-4',
-    question: 'מה שמה של הים שמקיף את ישראל?',
+    questionId: 4,
+    question: "איזה חיידר סבא של המנהלת ניהל?",
     answers: [
-      { answer: "הים התיכון", isCorrect: true },
-      { answer: "הים האדום", isCorrect: false },
-      { answer: "הים השחור", isCorrect: false }
+      { answer: "תשב\"ר", isCorrect: true },
+      { answer: "תורת אמת", isCorrect: false },
+      { answer: "באר יהושוע", isCorrect: false }
     ]
   },
   {
-    questionId: 'question-5',
-    question: 'כמה שפות רשמיות יש בישראל?',
+    questionId: 5,
+    question: "בכמה עבודות הסגנית עובדת?",
     answers: [
-      { answer: "שתיים", isCorrect: true },
-      { answer: "אחת", isCorrect: false },
-      { answer: "שלוש", isCorrect: false }
+      { answer: 3, isCorrect: true },
+      { answer: 2, isCorrect: false },
+      { answer: 6, isCorrect: false }
     ]
   },
   {
-    questionId: 'question-6',
-    question: 'איזו חיה נמצאת על הסמל של ירושלים?',
+    questionId: 6,
+    question: "באיזו שעה המורה בת שבע גולדברג עולה לאוטובוס?",
     answers: [
-      { answer: "אריה", isCorrect: true },
-      { answer: "נשר", isCorrect: false },
-      { answer: "שועל", isCorrect: false }
+      { answer: "07:27", isCorrect: true },
+      { answer: "07:35", isCorrect: false },
+      { answer: "07:22", isCorrect: false }
     ]
   },
   {
-    questionId: 'question-7',
-    question: 'מי היה ראש הממשלה הראשון של ישראל?',
+    questionId: 7,
+    question: "איזו מורה מכינה סימנים למנהלת?",
     answers: [
-      { answer: "דוד בן-גוריון", isCorrect: true },
-      { answer: "גולדה מאיר", isCorrect: false },
-      { answer: "יצחק רבין", isCorrect: false }
+      { answer: "המורה רחל היזראעלי", isCorrect: true },
+      { answer: "הסגנית", isCorrect: false },
+      { answer: "המנהלת מכינה לבד", isCorrect: false }
     ]
   },
   {
-    questionId: 'question-8',
-    question: 'מהו הנהר הארוך ביותר בישראל?',
+    questionId: 8,
+    question: "​כמה מורות עובדות השנה בסמינר?",
     answers: [
-      { answer: "הירדן", isCorrect: true },
-      { answer: "הירקון", isCorrect: false },
-      { answer: "נחל אלכסנדר", isCorrect: false }
+      { answer: 24, isCorrect: true },
+      { answer: 20, isCorrect: false },
+      { answer: 28, isCorrect: false }
     ]
   },
   {
-    questionId: 'question-9',
-    question: 'מהי העיר הגדולה ביותר בישראל?',
+    questionId: 9,
+    question: "איזו תופעה השתפרה תוך זמן קצר בזכות המנהלת?",
     answers: [
-      { answer: "ירושלים", isCorrect: true },
-      { answer: "תל אביב", isCorrect: false },
-      { answer: "חיפה", isCorrect: false }
+      { answer: "שרשרת צוואר", isCorrect: true },
+      { answer: "איחורים", isCorrect: false },
+      { answer: "חולצה בחוץ", isCorrect: false }
     ]
   },
   {
-    questionId: 'question-10',
-    question: 'איזה מאכל מסורתי אוכלים בפסח?',
+    questionId: 10,
+    question: "כמה מערכות השתנו שנה שעברה?",
     answers: [
-      { answer: "מצה", isCorrect: true },
-      { answer: "חלה", isCorrect: false },
-      { answer: "בורקס", isCorrect: false }
+      { answer: 4, isCorrect: true },
+      { answer: 3, isCorrect: false },
+      { answer: 1, isCorrect: false }
     ]
   },
   {
-    questionId: 'question-11',
-    question: 'כמה ימים יש בחודש פברואר בשנה רגילה?',
+    questionId: 11,
+    question: "מה התחביב של המורה חני פלם?",
     answers: [
-      { answer: "28", isCorrect: true },
-      { answer: "30", isCorrect: false },
-      { answer: "29", isCorrect: false }
+      { answer: "לצאת לטיולים", isCorrect: true },
+      { answer: "לקרוא", isCorrect: false },
+      { answer: "לפצח חידות מתמטיות", isCorrect: false }
     ]
   },
   {
-    questionId: 'question-12',
-    question: 'מהו המטבע הרשמי של ישראל?',
+    questionId: 12,
+    question: "כמה שיחות נכנסות בממוצע בשבוע לטלפון האישי של המנהלת בענייני הסמינר?",
     answers: [
-      { answer: "שקל", isCorrect: true },
-      { answer: "לירה", isCorrect: false },
-      { answer: "דולר", isCorrect: false }
+      { answer: "כ- 140", isCorrect: true },
+      { answer: "כ- 100", isCorrect: false },
+      { answer: "כ- 120", isCorrect: false }
     ]
   },
   {
-    questionId: 'question-13',
-    question: 'איזו עיר מכונה "העיר ללא הפסקה"?',
+    questionId: 13,
+    question: `
+    <img src='./question-images/question-14.JPG' />
+    `,
     answers: [
-      { answer: "תל אביב", isCorrect: true },
-      { answer: "ירושלים", isCorrect: false },
-      { answer: "חיפה", isCorrect: false }
+      { answer: "המורה חני גרוסמן", isCorrect: true },
+      { answer: "המורה חני פלם", isCorrect: false },
+      { answer: "המורה חני לנדא", isCorrect: false }
     ]
   },
   {
-    questionId: 'question-14',
-    question: 'מהו המקום הנמוך ביותר בעולם?',
+    questionId: 14,
+    question: "מי הבנות שהיו שותפות בצביעת הנדנדה הוורודה?",
     answers: [
-      { answer: "ים המלח", isCorrect: true },
-      { answer: "הר אוורסט", isCorrect: false },
-      { answer: "הגרנד קניון", isCorrect: false }
+      { answer: "6-8", isCorrect: true },
+      { answer: "10-12", isCorrect: false },
+      { answer: "2-3", isCorrect: false }
     ]
   },
   {
-    questionId: 'question-15',
-    question: 'מי כתב את ההמנון הלאומי של ישראל?',
+    questionId: 15,
+    question: "מי הבנות שמגיעות בד\"כ ראשונות לסמינר?",
     answers: [
-      { answer: "נפתלי הרץ אימבר", isCorrect: true },
-      { answer: "חיים נחמן ביאליק", isCorrect: false },
-      { answer: "שאול טשרניחובסקי", isCorrect: false }
+      { answer: "הגנת\"קיות", isCorrect: true },
+      { answer: "תמר לבקובסקי", isCorrect: false },
+      { answer: "הדר מנור", isCorrect: false }
     ]
   },
   {
-    questionId: 'question-16',
-    question: 'איזו חיה לא נכללת בחיות הכשרות?',
+    questionId: 16,
+    question: "לאיזו מורה הכינה רותי וועקנין מחזיק מפתחות?",
     answers: [
-      { answer: "חזיר", isCorrect: true },
-      { answer: "פרה", isCorrect: false },
-      { answer: "כבשה", isCorrect: false }
+      { answer: "המורה חני יאקאב", isCorrect: true },
+      { answer: "המורה בת שבע גולדברג", isCorrect: false },
+      { answer: "המורה חני גרוסמן", isCorrect: false }
     ]
   },
   {
-    questionId: 'question-17',
-    question: 'איזה כינוי יש ליצחק שמיר?',
+    questionId: 17,
+    question: "מי זכתה במכירה הסינית בשיעור פרטי מהמורה חני פלם?",
     answers: [
-      { answer: "לשועל", isCorrect: true },
-      { answer: "לנשר", isCorrect: false },
-      { answer: "לאריה", isCorrect: false }
+      { answer: "אורית נמני", isCorrect: true },
+      { answer: "נועה ניסנוב", isCorrect: false },
+      { answer: "יעל מילשטיין", isCorrect: false }
     ]
   },
   {
-    questionId: 'question-18',
-    question: 'איזה פרי מסמל את ראש השנה?',
+    questionId: 18,
+    question: "כמה זמן הגנים היו בסמינר שנה שעברה?",
     answers: [
-      { answer: "רימון", isCorrect: true },
-      { answer: "תפוז", isCorrect: false },
-      { answer: "תפוח", isCorrect: false }
+      { answer: "חודשיים", isCorrect: true },
+      { answer: "חצי שנה", isCorrect: false },
+      { answer: "חמישה שבועות", isCorrect: false }
     ]
   },
   {
-    questionId: 'question-19',
-    question: 'איזה חג מציין את הניצחון על היוונים?',
+    questionId: 19,
+    question: "כמה בנות מהסמינר התנדבו שנה שעברה ב\"נותנים כוח\"?",
     answers: [
-      { answer: "חנוכה", isCorrect: true },
-      { answer: "פסח", isCorrect: false },
-      { answer: "פורים", isCorrect: false }
+      { answer: "כ-14", isCorrect: true },
+      { answer: "כ- 17", isCorrect: false },
+      { answer: "כ- 6", isCorrect: false }
     ]
   },
   {
-    questionId: 'question-20',
-    question: 'מהו שם הספר הראשון של התנ"ך?',
+    questionId: 20,
+    question: "כמה אלעדיות יש לנו?",
     answers: [
-      { answer: "בראשית", isCorrect: true },
-      { answer: "שמות", isCorrect: false },
-      { answer: "ויקרא", isCorrect: false }
+      { answer: 12, isCorrect: true },
+      { answer: 10, isCorrect: false },
+      { answer: 15, isCorrect: false }
     ]
   },
   {
-    questionId: 'question-21',
-    question: 'איזה ים נמצא בצפון ישראל?',
+    questionId: 21,
+    question: "של איזה שיר היתה המנגינה של הקולולם במוצ\"ש במחנה?",
     answers: [
-      { answer: "ים כנרת", isCorrect: true },
-      { answer: "ים תיכון", isCorrect: false },
-      { answer: "ים סוף", isCorrect: false }
+      { answer: "אהבת תורה", isCorrect: true },
+      { answer: "עברתי בחושך", isCorrect: false },
+      { answer: "בר יוחאי", isCorrect: false }
     ]
   },
   {
-    questionId: 'question-22',
-    question: 'מהו השם הרשמי של יום העצמאות?',
+    questionId: 22,
+    question: "כמה חדרים לתלמידות היו במחנה קיץ?",
     answers: [
-      { answer: "יום הקמת המדינה", isCorrect: true },
-      { answer: "יום המדינה", isCorrect: false },
-      { answer: "יום האומה", isCorrect: false }
+      { answer: 10, isCorrect: true },
+      { answer: 20, isCorrect: false },
+      { answer: 12, isCorrect: false }
     ]
   },
   {
-    questionId: 'question-23',
-    question: 'איזה חג יהודי נמשך שמונה ימים?',
+    questionId: 23,
+    question: "מה השם השני של הסגנית?",
     answers: [
-      { answer: "חנוכה", isCorrect: true },
-      { answer: "פסח", isCorrect: false },
-      { answer: "שבועות", isCorrect: false }
+      { answer: "אין לה שם שני", isCorrect: true },
+      { answer: "יפה", isCorrect: false },
+      { answer: "רבקה", isCorrect: false }
     ]
   },
   {
-    questionId: 'question-24',
-    question: 'איזה מאכל מסורתי אוכלים בראש השנה?',
+    questionId: 24,
+    question: "לאיזו מורה יש הכי הרבה נכדים?",
     answers: [
-      { answer: "תפוח בדבש", isCorrect: true },
-      { answer: "חלה", isCorrect: false },
-      { answer: "בורקס", isCorrect: false }
+      { answer: "המורה שרי לוק", isCorrect: true },
+      { answer: "היועצת", isCorrect: false },
+      { answer: "המורה חוי שפירא", isCorrect: false }
     ]
   },
   {
-    questionId: 'question-25',
-    question: 'באיזו שנה החליט האו"ם להקים את מדינת ישראל?',
+    questionId: 25,
+    question: "באיזה סמינר לומדת הבת של המורה אביגיל שאר ישוב?",
     answers: [
-      { answer: "1947", isCorrect: true },
-      { answer: "1948", isCorrect: false },
-      { answer: "1945", isCorrect: false }
+      { answer: "צוקר", isCorrect: true },
+      { answer: "לדעת חכמה", isCorrect: false },
+      { answer: "כהנא", isCorrect: false }
     ]
   },
   {
-    questionId: 'question-26',
-    question: 'מהו המישור הגדול ביותר בישראל?',
+    questionId: 26,
+    question: "באיזה יום קבוע רמות תופסים את האולם?",
     answers: [
-      { answer: "מישור החוף", isCorrect: true },
-      { answer: "מישור הגולן", isCorrect: false },
-      { answer: "מישור רמון", isCorrect: false }
+      { answer: "רביעי", isCorrect: true },
+      { answer: "שלישי", isCorrect: false },
+      { answer: "חמישי", isCorrect: false }
     ]
   },
   {
-    questionId: 'question-27',
-    question: 'מי היה ראש הממשלה הראשון שנרצח?',
+    questionId: 27,
+    question: "באיזה בית ספר היועצת עובדת?",
     answers: [
-      { answer: "יצחק רבין", isCorrect: true },
-      { answer: "מנחם בגין", isCorrect: false },
-      { answer: "אריאל שרון", isCorrect: false }
+      { answer: "בי\"ע ראשון לציון", isCorrect: true },
+      { answer: "מסורת ישראל- קרית הרצוג", isCorrect: false },
+      { answer: "בי\"ע רחובות", isCorrect: false }
     ]
   },
   {
-    questionId: 'question-28',
-    question: 'איזה נהר נמצא במרכז ישראל?',
+    questionId: 28,
+    question: "כמה שעות שבועיות מלמדת המורה חוי שפירא בסמינר?",
     answers: [
-      { answer: "הירקון", isCorrect: true },
-      { answer: "הירדן", isCorrect: false },
-      { answer: "נחל אלכסנדר", isCorrect: false }
+      { answer: 14, isCorrect: true },
+      { answer: 12, isCorrect: false },
+      { answer: 17, isCorrect: false }
     ]
   },
   {
-    questionId: 'question-29',
-    question: 'באיזו שנה החליט האו"ם להקים את מדינת ישראל?',
+    questionId: 29,
+    question: "איזה פינוק חכה לתלמידות אחרי חופשת פסח שנה שעברה?",
     answers: [
-      { answer: "1947", isCorrect: true },
-      { answer: "1948", isCorrect: false },
-      { answer: "1945", isCorrect: false }
+      { answer: "קרטיבים", isCorrect: true },
+      { answer: "טילונים", isCorrect: false },
+      { answer: "מנה חמה", isCorrect: false }
     ]
   },
   {
-    questionId: 'question-30',
-    question: 'איזה עיר בישראל מכונה "בירת הנגב"?',
+    questionId: 30,
+    question: "מאיזה חנות היתה הפיצה שהמנהלת הזמינה לבנות שהגיעו לעבוד במוצ\"ש ערב ההתמודדות?",
     answers: [
-      { answer: "באר שבע", isCorrect: true },
-      { answer: "אילת", isCorrect: false },
-      { answer: "דימונה", isCorrect: false }
+      { answer: "אנג'ל", isCorrect: true },
+      { answer: "שמש", isCorrect: false },
+      { answer: "גולדה", isCorrect: false }
     ]
   },
   {
-    questionId: 'question-31',
-    question: 'מהי הציפור הלאומית של ישראל?',
+    questionId: 31,
+    question: "את מי רואים בקליפ של ההמנון שנה שעברה ראשונה?",
     answers: [
-      { answer: "דוכיפת", isCorrect: true },
-      { answer: "חסידה", isCorrect: false },
-      { answer: "עורב", isCorrect: false }
+      { answer: "נחמה א. טובי ל. רחל מ. תמר ל. אביגיל ק.", isCorrect: true },
+      { answer: "טליה ב. מימי פ. יעל ב. אביגיל ק.", isCorrect: false },
+      { answer: "נועה ד. עדי ה. ויעל ש.", isCorrect: false }
     ]
   },
   {
-    questionId: 'question-32',
-    question: 'איזה צמח מסמל את חג הפסח?',
+    questionId: 32,
+    question: "כמה בנות הכינו את הקצפת לעוגות חלאקה שנה שעברה?",
     answers: [
-      { answer: "מצה", isCorrect: true },
-      { answer: "מרור", isCorrect: false },
-      { answer: "חרוסת", isCorrect: false }
+      { answer: 2, isCorrect: true },
+      { answer: 3, isCorrect: false },
+      { answer: 1, isCorrect: false }
     ]
   },
   {
-    questionId: 'question-33',
-    question: 'מהו שם השדה תעופה המרכזי בישראל?',
+    questionId: 33,
+    question: "כמה בנות נרשמו השנה לסמינר?",
     answers: [
-      { answer: "נתב'ג", isCorrect: true },
-      { answer: "שדה דב", isCorrect: false },
-      { answer: "רמון", isCorrect: false }
+      { answer: "", isCorrect: true },
+      { answer: "", isCorrect: false },
+      { answer: "", isCorrect: false }
     ]
   },
   {
-    questionId: 'question-34',
-    question: 'מהו המאכל הלאומי של ישראל?',
+    questionId: 34,
+    question: "כמה קווי אוטובוס עוברים בתחנה שצמודה לבית רבקה",
     answers: [
-      { answer: "חומוס", isCorrect: true },
-      { answer: "שקשוקה", isCorrect: false },
-      { answer: "פלאפל", isCorrect: false }
+      { answer: 5, isCorrect: true },
+      { answer: 7, isCorrect: false },
+      { answer: 8, isCorrect: false }
     ]
   },
   {
-    questionId: 'question-35',
-    question: 'מהו שמו של יום הזיכרון לשואה?',
+    questionId: 35,
+    question: "איזו מורה היתה במכירת החולצות בחופש",
     answers: [
-      { answer: "יום השואה", isCorrect: true },
-      { answer: "יום הזיכרון", isCorrect: false },
-      { answer: "יום העצמאות", isCorrect: false }
+      { answer: "המורה חני גרוסמן", isCorrect: true },
+      { answer: "המורה שינדי רוזנפלד", isCorrect: false },
+      { answer: "המורה בת שבע גולדברג", isCorrect: false }
     ]
   },
   {
-    questionId: 'question-36',
-    question: 'מהי שפת הדיבור הרשמית בישראל?',
+    questionId: 36,
+    question: "איזו מורה גרה בגני תקווה",
     answers: [
-      { answer: "עברית", isCorrect: true },
-      { answer: "אנגלית", isCorrect: false },
-      { answer: "ערבית", isCorrect: false }
+      { answer: "המורה רחל היזראעלי", isCorrect: true },
+      { answer: "המורה נחמי גורדון", isCorrect: false },
+      { answer: "היועצת", isCorrect: false }
     ]
   },
   {
-    questionId: 'question-37',
-    question: 'באיזה שנה התרחש רצח רבין?',
+    questionId: 37,
+    question: "לאיזו מורה יש ידיים טובות?",
     answers: [
-      { answer: "1995", isCorrect: true },
-      { answer: "1994", isCorrect: false },
-      { answer: "1996", isCorrect: false }
+      { answer: "המורה יפי ברוקס", isCorrect: true },
+      { answer: "הסגנית", isCorrect: false },
+      { answer: "המורה שינדי רוזנפלד", isCorrect: false }
     ]
   },
   {
-    questionId: 'question-38',
-    question: 'מהי הרכבת החשמלית הראשונה בישראל?',
+    questionId: 38,
+    question: "באיזה שעה נגמר שיעור עשירי?",
     answers: [
-      { answer: "רכבת קלה", isCorrect: true },
-      { answer: "רכבת ישראל", isCorrect: false },
-      { answer: "מטרונית", isCorrect: false }
+      { answer: "16:50", isCorrect: true },
+      { answer: "16:55", isCorrect: false },
+      { answer: "16:45", isCorrect: false }
     ]
   },
   {
-    questionId: 'question-39',
-    question: 'מהי עיר הקודש לשלוש הדתות?',
+    questionId: 39,
+    question: "על מה מדבר הסעיף הראשון בתקנון?",
     answers: [
-      { answer: "ירושלים", isCorrect: true },
-      { answer: "תל אביב", isCorrect: false },
-      { answer: "חיפה", isCorrect: false }
-    ]
-  },
-  {
-    questionId: 'question-40',
-    question: 'מהו הכינוי של תל אביב?',
-    answers: [
-      { answer: "העיר הלבנה", isCorrect: true },
-      { answer: "העיר השחורה", isCorrect: false },
-      { answer: "העיר הירוקה", isCorrect: false }
+      { answer: "נוכחות סדירה", isCorrect: true },
+      { answer: "חולצה וחצאית תלבושת", isCorrect: false },
+      { answer: "בילויים", isCorrect: false }
     ]
   }
 ];

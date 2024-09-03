@@ -129,6 +129,10 @@ body {
   text-align: center;
   font-size: 12px;
 }
+.card-face .question-text img {
+  width: calc(100% + 30px);
+  margin: 0 -20px;
+}
 .card-face .question-answer {
   display: none;
 }
