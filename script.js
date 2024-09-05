@@ -8,11 +8,11 @@ const TIMEOUT_FOR_SINGLE_QUESTION = 10000;
 const questions = [
   {
     questionId: 1,
-    question: "מי המורה שבתמונה להשיג תמונה",
+    question: "של מי הילדים בסרטון הלחיים של חנות הצעצועים",
     answers: [
       { answer: "המנהלת", isCorrect: true },
-      { answer: "המורה חני יאקאב", isCorrect: false },
-      { answer: "המורה חוי שפירא", isCorrect: false }
+      { answer: "המורה שיינדי רוזנפלד", isCorrect: false },
+      { answer: "המורה חני גרוסמן", isCorrect: false }
     ]
   },
   {
@@ -300,9 +300,9 @@ const questions = [
     questionId: 33,
     question: "כמה בנות נרשמו השנה לסמינר?",
     answers: [
-      { answer: "", isCorrect: true },
-      { answer: "", isCorrect: false },
-      { answer: "", isCorrect: false }
+      { answer: "120", isCorrect: true },
+      { answer: "100", isCorrect: false },
+      { answer: "80", isCorrect: false }
     ]
   },
   {
@@ -357,6 +357,15 @@ const questions = [
       { answer: "נוכחות סדירה", isCorrect: true },
       { answer: "חולצה וחצאית תלבושת", isCorrect: false },
       { answer: "בילויים", isCorrect: false }
+    ]
+  },
+  {
+    questionId: 40,
+    question: "איפה לימדה המורה חוי שפירא?",
+    answers: [
+      { answer: "בעכו", isCorrect: true },
+      { answer: 'בבי"ס בחיפה', isCorrect: false },
+      { answer: "בתיכון בחיפה", isCorrect: false }
     ]
   }
 ];
