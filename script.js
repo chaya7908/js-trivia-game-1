@@ -528,7 +528,7 @@ function startGame() {
   },21000);
 
 
-  shuffleArray(questions).forEach((question) => {
+  questions.forEach((question) => {
     const card = document.createElement('div');
     card.className = 'card';
     card.id = question.questionId;
