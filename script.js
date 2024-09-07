@@ -71,7 +71,7 @@ const questions = [
   },
   {
     questionId: 8,
-    question: "​כמה מורות עובדות השנה בסמינר?",
+    question: "כמה מורות עובדות השנה בסמינר?",
     answers: [
       { answer: 24, isCorrect: true },
       { answer: 20, isCorrect: false },
@@ -109,25 +109,23 @@ const questions = [
     questionId: 12,
     question: "כמה שיחות נכנסות בממוצע בשבוע לטלפון האישי של המנהלת בענייני הסמינר?",
     answers: [
-      { answer: "כ- 140", isCorrect: true },
-      { answer: "כ- 100", isCorrect: false },
-      { answer: "כ- 120", isCorrect: false }
+      { answer: 140, isCorrect: true },
+      { answer: 100, isCorrect: false },
+      { answer: 120, isCorrect: false }
     ]
   },
   {
     questionId: 13,
-    question: `
-    <img src='./question-images/question-14.JPG' />
-    `,
+    question: "<img src='./question-images/question-14.JPG' />",
     answers: [
       { answer: "המורה חני גרוסמן", isCorrect: true },
       { answer: "המורה חני פלם", isCorrect: false },
-      { answer: "המורה חני לנדא", isCorrect: false }
+      { answer: "המורה חני יאקב", isCorrect: false }
     ]
   },
   {
     questionId: 14,
-    question: "מי הבנות שהיו שותפות בצביעת הנדנדה הוורודה?",
+    question: "כמה בנות היו שותפות בצביעת הנדנדה הוורודה?",
     answers: [
       { answer: "6-8", isCorrect: true },
       { answer: "10-12", isCorrect: false },
@@ -174,9 +172,9 @@ const questions = [
     questionId: 19,
     question: "כמה בנות מהסמינר התנדבו שנה שעברה ב\"נותנים כוח\"?",
     answers: [
-      { answer: "כ-14", isCorrect: true },
-      { answer: "כ- 17", isCorrect: false },
-      { answer: "כ- 6", isCorrect: false }
+      { answer: 14, isCorrect: true },
+      { answer: 17, isCorrect: false },
+      { answer: 6, isCorrect: false }
     ]
   },
   {
@@ -244,11 +242,11 @@ const questions = [
   },
   {
     questionId: 27,
-    question: "באיזה בית ספר היועצת עובדת?",
+    question: "באיזה תיכון היועצת עובדת?",
     answers: [
-      { answer: "בי\"ע ראשון לציון", isCorrect: true },
-      { answer: "מסורת ישראל- קרית הרצוג", isCorrect: false },
-      { answer: "בי\"ע רחובות", isCorrect: false }
+      { answer: "בראשון לציון", isCorrect: true },
+      { answer: "בבני ברק", isCorrect: false },
+      { answer: "ברחובות", isCorrect: false }
     ]
   },
   {
@@ -271,11 +269,11 @@ const questions = [
   },
   {
     questionId: 30,
-    question: "מאיזה חנות היתה הפיצה שהמנהלת הזמינה לבנות שהגיעו לעבוד במוצ\"ש ערב ההתמודדות?",
+    question: "איזה פיצה המנהלת הזמינה לבנות שהגיעו לעבוד במוצ\"ש ערב ההתמודדות?",
     answers: [
-      { answer: "אנג'ל", isCorrect: true },
-      { answer: "שמש", isCorrect: false },
-      { answer: "גולדה", isCorrect: false }
+      { answer: "פיצה אנג'ל", isCorrect: true },
+      { answer: "פיצה שמש", isCorrect: false },
+      { answer: "פיצה גולדה", isCorrect: false }
     ]
   },
   {
@@ -300,14 +298,14 @@ const questions = [
     questionId: 33,
     question: "כמה בנות נרשמו השנה לסמינר?",
     answers: [
-      { answer: "120", isCorrect: true },
-      { answer: "100", isCorrect: false },
-      { answer: "80", isCorrect: false }
+      { answer: 120, isCorrect: true },
+      { answer: 100, isCorrect: false },
+      { answer: 80, isCorrect: false }
     ]
   },
   {
     questionId: 34,
-    question: "כמה קווי אוטובוס עוברים בתחנה שצמודה לבית רבקה",
+    question: "כמה קווי אוטובוס עוברים בתחנה שצמודה לבית רבקה?",
     answers: [
       { answer: 5, isCorrect: true },
       { answer: 7, isCorrect: false },
@@ -316,7 +314,7 @@ const questions = [
   },
   {
     questionId: 35,
-    question: "איזו מורה היתה במכירת החולצות בחופש",
+    question: "איזו מורה היתה במכירת החולצות בחופש?",
     answers: [
       { answer: "המורה חני גרוסמן", isCorrect: true },
       { answer: "המורה שינדי רוזנפלד", isCorrect: false },
@@ -325,7 +323,7 @@ const questions = [
   },
   {
     questionId: 36,
-    question: "איזו מורה גרה בגני תקווה",
+    question: "איזו מורה גרה בגני תקווה?",
     answers: [
       { answer: "המורה רחל היזראעלי", isCorrect: true },
       { answer: "המורה נחמי גורדון", isCorrect: false },
@@ -364,7 +362,7 @@ const questions = [
     question: "איפה לימדה המורה חוי שפירא?",
     answers: [
       { answer: "בעכו", isCorrect: true },
-      { answer: 'בבי"ס בחיפה', isCorrect: false },
+      { answer: "בבי\"ס בחיפה", isCorrect: false },
       { answer: "בתיכון בחיפה", isCorrect: false }
     ]
   }
