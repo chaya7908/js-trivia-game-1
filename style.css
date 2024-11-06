@@ -15,12 +15,34 @@ body {
 }
 
 .grid-container {
-  display: grid;
-  /* Display 7 items on each row */
-  grid-template-columns: repeat(10, 1fr);
-  gap: 20px;
-  width: calc(100vw - 150px);
-  height: calc(100vh - 180px);
+  gap: 30px;
+  display: flex;
+  width: calc(100vw - 200px);
+  height: calc(100vh - 60px);
+}
+.grid-container .column {
+  display: flex;
+  flex-direction: column;
+  flex: 1;
+  gap: 10px;
+}
+.grid-container .column-header {
+  flex: 1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.grid-container .column-header img {
+  max-width: 70%;
+}
+.grid-container .column .column-cards {
+  flex: 6;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+.grid-container .column .column-cards .card {
+  flex: 1;
 }
 
 .grid-container.animate {
@@ -69,7 +91,7 @@ body {
 }
 
 .card.active {
-  border: 3px solid #c02235;
+  border: 3px solid #6cc9b7;
   transform: scale(2.3);
   z-index: 10;
 }
@@ -82,6 +104,11 @@ body {
 }
 .card-container:hover {
   transform: scale(1.7);
+  background-color: black;
+  z-index: 10;
+  position: relative;
+  box-shadow: 0 0 4px 0px #6cc9b7;
+  border-radius: 8px;
 }
 
 .card.flipped .card-container {
@@ -102,8 +129,17 @@ body {
 }
 
 .card-background {
+  border-right: 2px solid #6cc9b7; /* מסגרת בצד ימין */
+  border-bottom: 2px solid #6cc9b7; /* מסגרת בחלק התחתון */
 }
 
+.card-background > div {
+  height: 100%;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
 
 .card-background img {
   height: 85%;
@@ -113,10 +149,10 @@ body {
 .card-background img.text-image {
   position: absolute;
   /*filter: sepia(1) saturate(10000%) hue-rotate(180deg);*/
-  filter: invert(1) brightness(10000%);
+  /* filter: invert(1) brightness(10000%); */
   transition: transform 0.5s ease-in-out;
-  height: 32%;
-  top: 17px;
+  height: 80%;
+  /* top: 17px; */
 }
 
 .card-face {
@@ -125,7 +161,7 @@ body {
 }
 .card-face .question-text, .card-face .question-answer {
   margin: 0 20px;
-  color: #c02235;
+  color: #6cc9b7;
   text-align: center;
   font-size: 11px;
 }
@@ -175,7 +211,7 @@ body {
 .answer {
   background-color: white;
   border-radius: 8px;
-  color: #c02235;
+  color: #6cc9b7;
   text-align: center;
   font-size: 22px;
   font-weight: bolder;
@@ -184,7 +220,7 @@ body {
 }
 
 .answer:hover {
-  background-color: #c02235;
+  background-color: #6cc9b7;
   color: white;
   scale: 1.05;
 }

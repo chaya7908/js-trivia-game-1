@@ -4,366 +4,418 @@ const TIME_TO_WAIT_BEFORE_CLOSE_CORRECT_ANSWER = 4000;
 const TIME_TO_WAIT_BEFORE_CLOSE_WRONG_ANSWER = 2000;
 const TIMEOUT_FOR_SINGLE_QUESTION = 10000;
 
-
-const questions = [
+const COLUMNS = [
   {
-    questionId: 1,
-    question: "של מי הילדים בסרטון הלחיים של חנות הצעצועים",
-    answers: [
-      { answer: "המנהלת", isCorrect: true },
-      { answer: "המורה שיינדי רוזנפלד", isCorrect: false },
-      { answer: "המורה חני גרוסמן", isCorrect: false }
+    id: 1,
+    questions: [
+      {
+        questionId: 1,
+        question: "של מי הילדים בסרטון הלחיים של חנות הצעצועים",
+        answers: [
+          { answer: "המנהלת", isCorrect: true },
+          { answer: "המורה שיינדי רוזנפלד", isCorrect: false },
+          { answer: "המורה חני גרוסמן", isCorrect: false }
+        ]
+      },
+      {
+        questionId: 2,
+        question: "מה שם המנהלת?",
+        answers: [
+          { answer: "שירה כהן", isCorrect: true },
+          { answer: "אילה לוי", isCorrect: false },
+          { answer: "רותי פרץ", isCorrect: false }
+        ]
+      },
+      {
+        questionId: 3,
+        question: "באיזה תאריך חוגגים יום העצמאות?",
+        answers: [
+          { answer: "ה' באייר", isCorrect: true },
+          { answer: "כ' בתשרי", isCorrect: false },
+          { answer: "י' באב", isCorrect: false }
+        ]
+      },
+      {
+        questionId: 4,
+        question: "מי היה המורה של הכיתה הרביעית?",
+        answers: [
+          { answer: "המורה דינה", isCorrect: true },
+          { answer: "המורה רינה", isCorrect: false },
+          { answer: "המורה נועה", isCorrect: false }
+        ]
+      },
+      {
+        questionId: 5,
+        question: "מהו פרס נובל?",
+        answers: [
+          { answer: "פרס מדעי בינלאומי", isCorrect: true },
+          { answer: "פרס קולנוע", isCorrect: false },
+          { answer: "פרס ספורט", isCorrect: false }
+        ]
+      },
+      {
+        questionId: 6,
+        question: "באיזה גיל אפשר להתחיל לנהוג?",
+        answers: [
+          { answer: "17", isCorrect: true },
+          { answer: "15", isCorrect: false },
+          { answer: "20", isCorrect: false }
+        ]
+      }
     ]
   },
   {
-    questionId: 2,
-    question: "איזו מורה היתה כאן בשנה הראשונה",
-    answers: [
-      { answer: "המורה חני פלם", isCorrect: true },
-      { answer: "המורה חני יאקאב", isCorrect: false },
-      { answer: "המורה רחל היזרעאלי", isCorrect: false }
+    id: 2,
+    questions: [
+      {
+        questionId: 7,
+        question: "מה שמה של בירת ישראל?",
+        answers: [
+          { answer: "ירושלים", isCorrect: true },
+          { answer: "תל אביב", isCorrect: false },
+          { answer: "חיפה", isCorrect: false }
+        ]
+      },
+      {
+        questionId: 8,
+        question: "איזה צבעים יש בקשת בענן?",
+        answers: [
+          { answer: "אדום, כתום, צהוב, ירוק, כחול, סגול", isCorrect: true },
+          { answer: "כחול וצהוב", isCorrect: false },
+          { answer: "ורוד ושחור", isCorrect: false }
+        ]
+      },
+      {
+        questionId: 9,
+        question: "מהו מספר החודשים בשנה?",
+        answers: [
+          { answer: "12", isCorrect: true },
+          { answer: "10", isCorrect: false },
+          { answer: "15", isCorrect: false }
+        ]
+      },
+      {
+        questionId: 10,
+        question: "מהו הערך של פאי?",
+        answers: [
+          { answer: "3.14159", isCorrect: true },
+          { answer: "2.718", isCorrect: false },
+          { answer: "1.618", isCorrect: false }
+        ]
+      },
+      {
+        questionId: 11,
+        question: "כמה אותיות יש באלפבית העברי?",
+        answers: [
+          { answer: "22", isCorrect: true },
+          { answer: "26", isCorrect: false },
+          { answer: "30", isCorrect: false }
+        ]
+      },
+      {
+        questionId: 12,
+        question: "מי צייר את המונה ליזה?",
+        answers: [
+          { answer: "לאונרדו דה וינצ'י", isCorrect: true },
+          { answer: "פאבלו פיקאסו", isCorrect: false },
+          { answer: "ואן גוך", isCorrect: false }
+        ]
+      }
     ]
   },
   {
-    questionId: 3,
-    question: "מתי שונה הכינוי בלוגו מ'תיכון' ל'סמינר'",
-    answers: [
-      { answer: "בחודש טבת שנה שעברה", isCorrect: true },
-      { answer: "בתחילת שנה שעברה", isCorrect: false },
-      { answer: "בחופש האחרון", isCorrect: false }
+    id: 3,
+    questions: [
+      {
+        questionId: 13,
+        question: "באיזה יום נופל יום כיפור?",
+        answers: [
+          { answer: "י' בתשרי", isCorrect: true },
+          { answer: "ט' באב", isCorrect: false },
+          { answer: "ח' בניסן", isCorrect: false }
+        ]
+      },
+      {
+        questionId: 14,
+        question: "מי הוא ראש הממשלה הראשון של ישראל?",
+        answers: [
+          { answer: "דוד בן-גוריון", isCorrect: true },
+          { answer: "יצחק רבין", isCorrect: false },
+          { answer: "גולדה מאיר", isCorrect: false }
+        ]
+      },
+      {
+        questionId: 15,
+        question: "איזה כלי מוזיקלי יש מיתרים?",
+        answers: [
+          { answer: "כינור", isCorrect: true },
+          { answer: "חצוצרה", isCorrect: false },
+          { answer: "תוף", isCorrect: false }
+        ]
+      },
+      {
+        questionId: 16,
+        question: "כמה דקות יש בשעה?",
+        answers: [
+          { answer: "60", isCorrect: true },
+          { answer: "100", isCorrect: false },
+          { answer: "50", isCorrect: false }
+        ]
+      },
+      {
+        questionId: 17,
+        question: "כמה ימים יש בשבוע?",
+        answers: [
+          { answer: "7", isCorrect: true },
+          { answer: "5", isCorrect: false },
+          { answer: "6", isCorrect: false }
+        ]
+      },
+      {
+        questionId: 18,
+        question: "באיזה חודש חוגגים פסח?",
+        answers: [
+          { answer: "ניסן", isCorrect: true },
+          { answer: "תשרי", isCorrect: false },
+          { answer: "סיון", isCorrect: false }
+        ]
+      }
     ]
   },
   {
-    questionId: 4,
-    question: "איזה חיידר סבא של המנהלת ניהל?",
-    answers: [
-      { answer: "תשב\"ר", isCorrect: true },
-      { answer: "תורת אמת", isCorrect: false },
-      { answer: "באר יהושוע", isCorrect: false }
+    id: 4,
+    questions: [
+      {
+        questionId: 19,
+        question: "מהו המאכל הלאומי של ישראל?",
+        answers: [
+          { answer: "חומוס", isCorrect: true },
+          { answer: "בורגר", isCorrect: false },
+          { answer: "פסטה", isCorrect: false }
+        ]
+      },
+      {
+        questionId: 20,
+        question: "איזה ים נמצא ליד ישראל?",
+        answers: [
+          { answer: "הים התיכון", isCorrect: true },
+          { answer: "הים הכספי", isCorrect: false },
+          { answer: "הים השחור", isCorrect: false }
+        ]
+      },
+      {
+        questionId: 21,
+        question: "מהי המהירות המותרת בכביש מהיר?",
+        answers: [
+          { answer: "110 קמ\"ש", isCorrect: true },
+          { answer: "80 קמ\"ש", isCorrect: false },
+          { answer: "150 קמ\"ש", isCorrect: false }
+        ]
+      },
+      {
+        questionId: 22,
+        question: "באיזה אזור זמן ישראל נמצאת?",
+        answers: [
+          { answer: "GMT+2", isCorrect: true },
+          { answer: "GMT-5", isCorrect: false },
+          { answer: "GMT+1", isCorrect: false }
+        ]
+      },
+      {
+        questionId: 23,
+        question: "מהו הריבוע של 3?",
+        answers: [
+          { answer: "9", isCorrect: true },
+          { answer: "6", isCorrect: false },
+          { answer: "12", isCorrect: false }
+        ]
+      },
+      {
+        questionId: 24,
+        question: "מהו אורך נהר הנילוס?",
+        answers: [
+          { answer: "6,650 ק\"מ", isCorrect: true },
+          { answer: "3,500 ק\"מ", isCorrect: false },
+          { answer: "8,000 ק\"מ", isCorrect: false }
+        ]
+      }
     ]
   },
   {
-    questionId: 5,
-    question: "בכמה עבודות הסגנית עובדת?",
-    answers: [
-      { answer: 3, isCorrect: true },
-      { answer: 2, isCorrect: false },
-      { answer: 6, isCorrect: false }
+    id: 5,
+    questions: [
+      {
+        questionId: 25,
+        question: "איזה חיה נחשבת למלך היער?",
+        answers: [
+          { answer: "אריה", isCorrect: true },
+          { answer: "פיל", isCorrect: false },
+          { answer: "טיגריס", isCorrect: false }
+        ]
+      },
+      {
+        questionId: 26,
+        question: "כמה ימים יש בחודש פברואר?",
+        answers: [
+          { answer: "28 או 29", isCorrect: true },
+          { answer: "30", isCorrect: false },
+          { answer: "31", isCorrect: false }
+        ]
+      },
+      {
+        questionId: 27,
+        question: "מה שם השפה הרשמית בישראל?",
+        answers: [
+          { answer: "עברית", isCorrect: true },
+          { answer: "אנגלית", isCorrect: false },
+          { answer: "ערבית", isCorrect: false }
+        ]
+      },
+      {
+        questionId: 28,
+        question: "כמה חודשים יש בשנה עברית?",
+        answers: [
+          { answer: "12 או 13", isCorrect: true },
+          { answer: "10", isCorrect: false },
+          { answer: "11", isCorrect: false }
+        ]
+      },
+      {
+        questionId: 29,
+        question: "מה הוא ההר הגבוה ביותר בעולם?",
+        answers: [
+          { answer: "הר האוורסט", isCorrect: true },
+          { answer: "הר האלבורז", isCorrect: false },
+          { answer: "הר ארארט", isCorrect: false }
+        ]
+      },
+      {
+        questionId: 30,
+        question: "מה שם המפרץ בו נמצא אילת?",
+        answers: [
+          { answer: "מפרץ אילת", isCorrect: true },
+          { answer: "מפרץ תל אביב", isCorrect: false },
+          { answer: "מפרץ חיפה", isCorrect: false }
+        ]
+      }
     ]
   },
   {
-    questionId: 6,
-    question: "באיזו שעה המורה בת שבע גולדברג עולה לאוטובוס?",
-    answers: [
-      { answer: "07:27", isCorrect: true },
-      { answer: "07:35", isCorrect: false },
-      { answer: "07:22", isCorrect: false }
+    id: 6,
+    questions: [
+      {
+        questionId: 31,
+        question: "מהו מספר האיברים בגוף האדם?",
+        answers: [
+          { answer: "206", isCorrect: true },
+          { answer: "100", isCorrect: false },
+          { answer: "302", isCorrect: false }
+        ]
+      },
+      {
+        questionId: 32,
+        question: "מהו המספר הזוגי הכי נמוך?",
+        answers: [
+          { answer: "2", isCorrect: true },
+          { answer: "1", isCorrect: false },
+          { answer: "0", isCorrect: false }
+        ]
+      },
+      {
+        questionId: 33,
+        question: "מהו המטבע בישראל?",
+        answers: [
+          { answer: "שקל חדש", isCorrect: true },
+          { answer: "דולר", isCorrect: false },
+          { answer: "יורו", isCorrect: false }
+        ]
+      },
+      {
+        questionId: 34,
+        question: "מהו הערך של המספר פאי?",
+        answers: [
+          { answer: "3.14159", isCorrect: true },
+          { answer: "3.14", isCorrect: false },
+          { answer: "3.5", isCorrect: false }
+        ]
+      },
+      {
+        questionId: 35,
+        question: "מי ממציא מנורת החשמל?",
+        answers: [
+          { answer: "תומאס אדיסון", isCorrect: true },
+          { answer: "אלברט איינשטיין", isCorrect: false },
+          { answer: "ניקולה טסלה", isCorrect: false }
+        ]
+      },
+      {
+        questionId: 36,
+        question: "איזה אזור נמצא דרומית לישראל?",
+        answers: [
+          { answer: "מצרים", isCorrect: true },
+          { answer: "לבנון", isCorrect: false },
+          { answer: "סוריה", isCorrect: false }
+        ]
+      }
     ]
   },
   {
-    questionId: 7,
-    question: "איזו מורה מכינה סימנים למנהלת?",
-    answers: [
-      { answer: "המורה רחל היזראעלי", isCorrect: true },
-      { answer: "הסגנית", isCorrect: false },
-      { answer: "המנהלת מכינה לבד", isCorrect: false }
-    ]
-  },
-  {
-    questionId: 8,
-    question: "כמה מורות עובדות השנה בסמינר?",
-    answers: [
-      { answer: 24, isCorrect: true },
-      { answer: 20, isCorrect: false },
-      { answer: 28, isCorrect: false }
-    ]
-  },
-  {
-    questionId: 9,
-    question: "איזו תופעה השתפרה תוך זמן קצר בזכות המנהלת?",
-    answers: [
-      { answer: "שרשרת צוואר", isCorrect: true },
-      { answer: "איחורים", isCorrect: false },
-      { answer: "חולצה בחוץ", isCorrect: false }
-    ]
-  },
-  {
-    questionId: 10,
-    question: "כמה מערכות השתנו שנה שעברה?",
-    answers: [
-      { answer: 4, isCorrect: true },
-      { answer: 3, isCorrect: false },
-      { answer: 1, isCorrect: false }
-    ]
-  },
-  {
-    questionId: 11,
-    question: "מה התחביב של המורה חני פלם?",
-    answers: [
-      { answer: "לצאת לטיולים", isCorrect: true },
-      { answer: "לקרוא", isCorrect: false },
-      { answer: "לפצח חידות מתמטיות", isCorrect: false }
-    ]
-  },
-  {
-    questionId: 12,
-    question: "כמה שיחות נכנסות בממוצע בשבוע לטלפון האישי של המנהלת בענייני הסמינר?",
-    answers: [
-      { answer: 140, isCorrect: true },
-      { answer: 100, isCorrect: false },
-      { answer: 120, isCorrect: false }
-    ]
-  },
-  {
-    questionId: 13,
-    question: "<img src='./question-images/question-14.JPG' />",
-    answers: [
-      { answer: "המורה חני גרוסמן", isCorrect: true },
-      { answer: "המורה חני פלם", isCorrect: false },
-      { answer: "המורה חני יאקב", isCorrect: false }
-    ]
-  },
-  {
-    questionId: 14,
-    question: "כמה בנות היו שותפות בצביעת הנדנדה הוורודה?",
-    answers: [
-      { answer: "6-8", isCorrect: true },
-      { answer: "10-12", isCorrect: false },
-      { answer: "2-3", isCorrect: false }
-    ]
-  },
-  {
-    questionId: 15,
-    question: "מי הבנות שמגיעות בד\"כ ראשונות לסמינר?",
-    answers: [
-      { answer: "הגנת\"קיות", isCorrect: true },
-      { answer: "תמר לבקובסקי", isCorrect: false },
-      { answer: "הדר מנור", isCorrect: false }
-    ]
-  },
-  {
-    questionId: 16,
-    question: "לאיזו מורה הכינה רותי וועקנין מחזיק מפתחות?",
-    answers: [
-      { answer: "המורה חני יאקאב", isCorrect: true },
-      { answer: "המורה בת שבע גולדברג", isCorrect: false },
-      { answer: "המורה חני גרוסמן", isCorrect: false }
-    ]
-  },
-  {
-    questionId: 17,
-    question: "מי זכתה במכירה הסינית בשיעור פרטי מהמורה חני פלם?",
-    answers: [
-      { answer: "אורית נמני", isCorrect: true },
-      { answer: "נועה ניסנוב", isCorrect: false },
-      { answer: "יעל מילשטיין", isCorrect: false }
-    ]
-  },
-  {
-    questionId: 18,
-    question: "כמה זמן הגנים היו בסמינר שנה שעברה?",
-    answers: [
-      { answer: "חודשיים", isCorrect: true },
-      { answer: "חצי שנה", isCorrect: false },
-      { answer: "חמישה שבועות", isCorrect: false }
-    ]
-  },
-  {
-    questionId: 19,
-    question: "כמה בנות מהסמינר התנדבו שנה שעברה ב\"נותנים כוח\"?",
-    answers: [
-      { answer: 14, isCorrect: true },
-      { answer: 17, isCorrect: false },
-      { answer: 6, isCorrect: false }
-    ]
-  },
-  {
-    questionId: 20,
-    question: "כמה אלעדיות יש לנו?",
-    answers: [
-      { answer: 12, isCorrect: true },
-      { answer: 10, isCorrect: false },
-      { answer: 15, isCorrect: false }
-    ]
-  },
-  {
-    questionId: 21,
-    question: "של איזה שיר היתה המנגינה של הקולולם במוצ\"ש במחנה?",
-    answers: [
-      { answer: "אהבת תורה", isCorrect: true },
-      { answer: "עברתי בחושך", isCorrect: false },
-      { answer: "בר יוחאי", isCorrect: false }
-    ]
-  },
-  {
-    questionId: 22,
-    question: "כמה חדרים לתלמידות היו במחנה קיץ?",
-    answers: [
-      { answer: 10, isCorrect: true },
-      { answer: 20, isCorrect: false },
-      { answer: 12, isCorrect: false }
-    ]
-  },
-  {
-    questionId: 23,
-    question: "מה השם השני של הסגנית?",
-    answers: [
-      { answer: "אין לה שם שני", isCorrect: true },
-      { answer: "יפה", isCorrect: false },
-      { answer: "רבקה", isCorrect: false }
-    ]
-  },
-  {
-    questionId: 24,
-    question: "לאיזו מורה יש הכי הרבה נכדים?",
-    answers: [
-      { answer: "המורה שרי לוק", isCorrect: true },
-      { answer: "היועצת", isCorrect: false },
-      { answer: "המורה חוי שפירא", isCorrect: false }
-    ]
-  },
-  {
-    questionId: 25,
-    question: "באיזה סמינר לומדת הבת של המורה אביגיל שאר ישוב?",
-    answers: [
-      { answer: "צוקר", isCorrect: true },
-      { answer: "לדעת חכמה", isCorrect: false },
-      { answer: "כהנא", isCorrect: false }
-    ]
-  },
-  {
-    questionId: 26,
-    question: "באיזה יום קבוע רמות תופסים את האולם?",
-    answers: [
-      { answer: "רביעי", isCorrect: true },
-      { answer: "שלישי", isCorrect: false },
-      { answer: "חמישי", isCorrect: false }
-    ]
-  },
-  {
-    questionId: 27,
-    question: "באיזה תיכון היועצת עובדת?",
-    answers: [
-      { answer: "בראשון לציון", isCorrect: true },
-      { answer: "בבני ברק", isCorrect: false },
-      { answer: "ברחובות", isCorrect: false }
-    ]
-  },
-  {
-    questionId: 28,
-    question: "כמה שעות שבועיות מלמדת המורה חוי שפירא בסמינר?",
-    answers: [
-      { answer: 14, isCorrect: true },
-      { answer: 12, isCorrect: false },
-      { answer: 17, isCorrect: false }
-    ]
-  },
-  {
-    questionId: 29,
-    question: "איזה פינוק חכה לתלמידות אחרי חופשת פסח שנה שעברה?",
-    answers: [
-      { answer: "קרטיבים", isCorrect: true },
-      { answer: "טילונים", isCorrect: false },
-      { answer: "מנה חמה", isCorrect: false }
-    ]
-  },
-  {
-    questionId: 30,
-    question: "איזה פיצה המנהלת הזמינה לבנות שהגיעו לעבוד במוצ\"ש ערב ההתמודדות?",
-    answers: [
-      { answer: "פיצה אנג'ל", isCorrect: true },
-      { answer: "פיצה שמש", isCorrect: false },
-      { answer: "פיצה גולדה", isCorrect: false }
-    ]
-  },
-  {
-    questionId: 31,
-    question: "את מי רואים בקליפ של ההמנון שנה שעברה ראשונה?",
-    answers: [
-      { answer: "נחמה א. טובי ל. רחל מ. תמר ל. אביגיל ק.", isCorrect: true },
-      { answer: "טליה ב. מימי פ. יעל ב. אביגיל ק.", isCorrect: false },
-      { answer: "נועה ד. עדי ה. ויעל ש.", isCorrect: false }
-    ]
-  },
-  {
-    questionId: 32,
-    question: "כמה בנות הכינו את הקצפת לעוגות חלאקה שנה שעברה?",
-    answers: [
-      { answer: 2, isCorrect: true },
-      { answer: 3, isCorrect: false },
-      { answer: 1, isCorrect: false }
-    ]
-  },
-  {
-    questionId: 33,
-    question: "כמה בנות נרשמו השנה לסמינר?",
-    answers: [
-      { answer: 120, isCorrect: true },
-      { answer: 100, isCorrect: false },
-      { answer: 80, isCorrect: false }
-    ]
-  },
-  {
-    questionId: 34,
-    question: "כמה קווי אוטובוס עוברים בתחנה שצמודה לבית רבקה?",
-    answers: [
-      { answer: 5, isCorrect: true },
-      { answer: 7, isCorrect: false },
-      { answer: 8, isCorrect: false }
-    ]
-  },
-  {
-    questionId: 35,
-    question: "איזו מורה היתה במכירת החולצות בחופש?",
-    answers: [
-      { answer: "המורה חני גרוסמן", isCorrect: true },
-      { answer: "המורה שינדי רוזנפלד", isCorrect: false },
-      { answer: "המורה בת שבע גולדברג", isCorrect: false }
-    ]
-  },
-  {
-    questionId: 36,
-    question: "איזו מורה גרה בגני תקווה?",
-    answers: [
-      { answer: "המורה רחל היזראעלי", isCorrect: true },
-      { answer: "המורה נחמי גורדון", isCorrect: false },
-      { answer: "היועצת", isCorrect: false }
-    ]
-  },
-  {
-    questionId: 37,
-    question: "לאיזו מורה יש ידיים טובות?",
-    answers: [
-      { answer: "המורה יפי ברוקס", isCorrect: true },
-      { answer: "הסגנית", isCorrect: false },
-      { answer: "המורה שינדי רוזנפלד", isCorrect: false }
-    ]
-  },
-  {
-    questionId: 38,
-    question: "באיזה שעה נגמר שיעור עשירי?",
-    answers: [
-      { answer: "16:50", isCorrect: true },
-      { answer: "16:55", isCorrect: false },
-      { answer: "16:45", isCorrect: false }
-    ]
-  },
-  {
-    questionId: 39,
-    question: "על מה מדבר הסעיף הראשון בתקנון?",
-    answers: [
-      { answer: "נוכחות סדירה", isCorrect: true },
-      { answer: "חולצה וחצאית תלבושת", isCorrect: false },
-      { answer: "בילויים", isCorrect: false }
-    ]
-  },
-  {
-    questionId: 40,
-    question: "איפה לימדה המורה חוי שפירא?",
-    answers: [
-      { answer: "בעכו", isCorrect: true },
-      { answer: "בבי\"ס בחיפה", isCorrect: false },
-      { answer: "בתיכון בחיפה", isCorrect: false }
+    id: 7,
+    questions: [
+      {
+        questionId: 37,
+        question: "מהו מקור השוקולד?",
+        answers: [
+          { answer: "פולי קקאו", isCorrect: true },
+          { answer: "חלב", isCorrect: false },
+          { answer: "תמרים", isCorrect: false }
+        ]
+      },
+      {
+        questionId: 38,
+        question: "מהו חמש של חמש?",
+        answers: [
+          { answer: "25", isCorrect: true },
+          { answer: "10", isCorrect: false },
+          { answer: "15", isCorrect: false }
+        ]
+      },
+      {
+        questionId: 39,
+        question: "מהו הצבע של השמש?",
+        answers: [
+          { answer: "צהוב", isCorrect: true },
+          { answer: "כחול", isCorrect: false },
+          { answer: "אדום", isCorrect: false }
+        ]
+      },
+      {
+        questionId: 40,
+        question: "מהי הבירה של גרמניה?",
+        answers: [
+          { answer: "ברלין", isCorrect: true },
+          { answer: "מינכן", isCorrect: false },
+          { answer: "פרנקפורט", isCorrect: false }
+        ]
+      },
+      {
+        questionId: 41,
+        question: "מהו היבשת שבה נמצאת ישראל?",
+        answers: [
+          { answer: "אסיה", isCorrect: true },
+          { answer: "אירופה", isCorrect: false },
+          { answer: "אפריקה", isCorrect: false }
+        ]
+      },
+      {
+        questionId: 42,
+        question: "מהו מספר שעות ביום?",
+        answers: [
+          { answer: "24", isCorrect: true },
+          { answer: "12", isCorrect: false },
+          { answer: "36", isCorrect: false }
+        ]
+      }
     ]
   }
 ];
@@ -435,7 +487,7 @@ function showAnswersPopup(questionId) {
   toggleAnswersPopup(true);
 
   const answersList = document.querySelector('.answers-popup-content .answers-list');
-  const currentQuestion = questions.find(q => q.questionId === questionId);
+  const currentQuestion = COLUMNS.map(c=> c.questions).flat().find(q => q.questionId === questionId);
 
   answersList.innerHTML = ``;
   for (const { answer, isCorrect } of shuffleArray(currentQuestion.answers)) {
@@ -525,25 +577,42 @@ function startGame() {
     gridContainer.classList.remove('animate')
   },21000);
 
+  COLUMNS.forEach((c) => {
+    const column = document.createElement('div');
+    column.className = 'column';
+    
+    const columnHeader = document.createElement('div');
+    columnHeader.className = 'column-header swing';
+    columnHeader.style = `--random-delay: ${Math.random() * 4}s`;
+    columnHeader.innerHTML = `<img src="./columns/${c.id}.png">`;
+    column.appendChild(columnHeader);
 
-  questions.forEach((question) => {
-    const card = document.createElement('div');
-    card.className = 'card';
-    card.id = question.questionId;
-    card.innerHTML = `
-        <div class="card-container" style="--random-delay: ${Math.random() * 4}s">
-          <div class="card-background swing">
-            <img class="main-image" src="./cup.png">
-            <img class="text-image zoom-out" src="./life.png">
+    const columnCards = document.createElement('div');
+    columnCards.className = 'column-cards';
+    column.appendChild(columnCards);
+
+    c.questions.forEach((question) => {
+      const card = document.createElement('div');
+      card.className = 'card';
+      card.id = question.questionId;
+      card.innerHTML = `
+          <div class="card-container" style="--random-delay: ${Math.random() * 4}s">
+            <div class="card-background">
+              <div class="zoom-out">
+                <img class="text-image swing" src="./logo.png">
+              </div>
+            </div>
+            <div class="card-face">
+              <div class="question-text">${question.question}</div>
+              <div class="question-answer">${question.answers.find(a => a.isCorrect).answer}</div>
+            </div>
           </div>
-          <div class="card-face">
-            <div class="question-text">${question.question}</div>
-            <div class="question-answer">${question.answers.find(a => a.isCorrect).answer}</div>
-          </div>
-        </div>
-      `;
-    card.addEventListener('click', () => handleCardClick(question.questionId));
-    gridContainer.appendChild(card);
+        `;
+      card.addEventListener('click', () => handleCardClick(question.questionId));
+      columnCards.appendChild(card);
+    });
+
+    gridContainer.appendChild(column);
   });
 }
 
