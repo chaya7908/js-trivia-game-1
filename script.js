@@ -9,118 +9,110 @@ const COLUMNS = [
     id: 1,
     questions: [
       {
-        questionId: 1,
-        question: "של מי הילדים בסרטון הלחיים של חנות הצעצועים",
+        questionId: 'question-1',
+        question: 'כמה פעמים גולי גליקזאהן הייתה בים השנה?',
         answers: [
-          { answer: "המנהלת", isCorrect: true },
-          { answer: "המורה שיינדי רוזנפלד", isCorrect: false },
-          { answer: "המורה חני גרוסמן", isCorrect: false }
+          { answer: "לא ידוע", isCorrect: true },
+          { answer: "אף פעם", isCorrect: false },
+          { answer: "7 פעמים", isCorrect: false }
         ]
       },
       {
-        questionId: 2,
-        question: "מה שם המנהלת?",
+        questionId: 'question-2',
+        question: 'אצל מי מוכנים לשבת ביום שישי בחצות ומקבלים שבת בנחת?',
         answers: [
-          { answer: "שירה כהן", isCorrect: true },
-          { answer: "אילה לוי", isCorrect: false },
-          { answer: "רותי פרץ", isCorrect: false }
+          { answer: "המורה גרוסברגר", isCorrect: true },
+          { answer: "משפחת פרל", isCorrect: false },
+          { answer: "המורה צלניקר", isCorrect: false }
         ]
       },
       {
-        questionId: 3,
-        question: "באיזה תאריך חוגגים יום העצמאות?",
+        questionId: 'question-3',
+        question: 'הכיסאות סביב השולחנות העגולים... מתי הם בתפוסה מלאה?',
         answers: [
-          { answer: "ה' באייר", isCorrect: true },
-          { answer: "כ' בתשרי", isCorrect: false },
-          { answer: "י' באב", isCorrect: false }
+          { answer: "בתקופת המבחנים", isCorrect: true },
+          { answer: "בהפסקה", isCorrect: false },
+          { answer: "בתמריצים", isCorrect: false }
         ]
       },
       {
-        questionId: 4,
-        question: "מי היה המורה של הכיתה הרביעית?",
+        questionId: 'question-4',
+        question: 'באיזו כיתה מנוחת הצהריים היא תופעה רווחת',
         answers: [
-          { answer: "המורה דינה", isCorrect: true },
-          { answer: "המורה רינה", isCorrect: false },
-          { answer: "המורה נועה", isCorrect: false }
+          { answer: "יב", isCorrect: true },
+          { answer: "ט", isCorrect: false },
+          { answer: "יא", isCorrect: false }
         ]
       },
       {
-        questionId: 5,
-        question: "מהו פרס נובל?",
-        answers: [
-          { answer: "פרס מדעי בינלאומי", isCorrect: true },
-          { answer: "פרס קולנוע", isCorrect: false },
-          { answer: "פרס ספורט", isCorrect: false }
-        ]
+        questionId: 'question-5',
+        question: 'משימה: מוזמנות לבמה לבצע בנחת',
+        answers: []
       },
       {
-        questionId: 6,
-        question: "באיזה גיל אפשר להתחיל לנהוג?",
+        questionId: 'question-6',
+        question: 'הפתעה, מה הכנו לכן?',
         answers: [
-          { answer: "17", isCorrect: true },
-          { answer: "15", isCorrect: false },
-          { answer: "20", isCorrect: false }
+          { answer: "קרטיבים", isCorrect: true },
+          { answer: "שלוקים", isCorrect: false },
+          { answer: "איגלו", isCorrect: false }
         ]
-      }
+      },
     ]
   },
   {
     id: 2,
     questions: [
       {
-        questionId: 7,
-        question: "מה שמה של בירת ישראל?",
+        questionId: 'question-7',
+        question: 'מתי הבנות מחוץ לעיר רגילות לקום בבוקר?',
         answers: [
-          { answer: "ירושלים", isCorrect: true },
-          { answer: "תל אביב", isCorrect: false },
-          { answer: "חיפה", isCorrect: false }
+          { answer: "06:30", isCorrect: true },
+          { answer: "07:05", isCorrect: false },
+          { answer: "עם עלות השחר", isCorrect: false }
         ]
       },
       {
-        questionId: 8,
-        question: "איזה צבעים יש בקשת בענן?",
+        questionId: 'question-8',
+        question: 'מתי כיתה י"ב רגילה לעשות שיעורי בית באנגלית [הקבצה א\'2]?',
         answers: [
-          { answer: "אדום, כתום, צהוב, ירוק, כחול, סגול", isCorrect: true },
-          { answer: "כחול וצהוב", isCorrect: false },
-          { answer: "ורוד ושחור", isCorrect: false }
+          { answer: "בהפסקה", isCorrect: true },
+          { answer: "בבית", isCorrect: false },
+          { answer: "מיד בשיעור", isCorrect: false }
         ]
       },
       {
-        questionId: 9,
-        question: "מהו מספר החודשים בשנה?",
+        questionId: 'question-9',
+        question: 'מי רגילה לברך רק מתוך הכתוב?',
         answers: [
-          { answer: "12", isCorrect: true },
-          { answer: "10", isCorrect: false },
-          { answer: "15", isCorrect: false }
+          { answer: "המורה זומר", isCorrect: true },
+          { answer: "לא ידוע", isCorrect: false },
+          { answer: "כולן", isCorrect: false }
         ]
       },
       {
-        questionId: 10,
-        question: "מהו הערך של פאי?",
+        questionId: 'question-10',
+        question: "'הרגל נעשה טבע'- מי אומרת הרבה את המשפט?",
         answers: [
-          { answer: "3.14159", isCorrect: true },
-          { answer: "2.718", isCorrect: false },
-          { answer: "1.618", isCorrect: false }
+          { answer: "המנהלת", isCorrect: true },
+          { answer: "הסגנית", isCorrect: false },
+          { answer: "המזכירה", isCorrect: false }
         ]
       },
       {
-        questionId: 11,
-        question: "כמה אותיות יש באלפבית העברי?",
-        answers: [
-          { answer: "22", isCorrect: true },
-          { answer: "26", isCorrect: false },
-          { answer: "30", isCorrect: false }
-        ]
+        questionId: 'question-11',
+        question: 'משימה: עליכן להעביר חוט ביניכן בלי לקום מהכיסא.',
+        answers: []
       },
       {
-        questionId: 12,
-        question: "מי צייר את המונה ליזה?",
+        questionId: 'question-12',
+        question: 'הפתעה, מה הכנו לכן?',
         answers: [
-          { answer: "לאונרדו דה וינצ'י", isCorrect: true },
-          { answer: "פאבלו פיקאסו", isCorrect: false },
-          { answer: "ואן גוך", isCorrect: false }
+          { answer: "משהו שרגילים לאכול", isCorrect: true },
+          { answer: "ממתק חדש ", isCorrect: false },
+          { answer: "קרמבו", isCorrect: false }
         ]
-      }
+      },
     ]
   },
   {
@@ -128,56 +120,53 @@ const COLUMNS = [
     questions: [
       {
         questionId: 13,
-        question: "באיזה יום נופל יום כיפור?",
+        question: "כמה זמן לוקח למורה דויטש 'לקפוץ' לחתונה של תלמידה בבני ברק?",
         answers: [
-          { answer: "י' בתשרי", isCorrect: true },
-          { answer: "ט' באב", isCorrect: false },
-          { answer: "ח' בניסן", isCorrect: false }
+          { answer: "שעה", isCorrect: true },
+          { answer: "שעתיים", isCorrect: false },
+          { answer: "30 דקות", isCorrect: false }
         ]
       },
       {
         questionId: 14,
-        question: "מי הוא ראש הממשלה הראשון של ישראל?",
+        question: "אם קופצים גבוה מידי נופלים' באיזו תוכנית הוזכר?",
         answers: [
-          { answer: "דוד בן-גוריון", isCorrect: true },
-          { answer: "יצחק רבין", isCorrect: false },
-          { answer: "גולדה מאיר", isCorrect: false }
+          { answer: 'תעמולה של כיתה י"ב', isCorrect: true },
+          { answer: "תוכנית פתיחה למחנה", isCorrect: false },
+          { answer: "בשבת עיון", isCorrect: false }
         ]
       },
       {
         questionId: 15,
-        question: "איזה כלי מוזיקלי יש מיתרים?",
+        question: "באיזה המנון מוזכרת המילה 'קפיצה'?",
         answers: [
-          { answer: "כינור", isCorrect: true },
-          { answer: "חצוצרה", isCorrect: false },
-          { answer: "תוף", isCorrect: false }
+          { answer: "כלי למעלות", isCorrect: true },
+          { answer: "אויף שמחעס", isCorrect: false },
+          { answer: "מדרגות", isCorrect: false }
         ]
       },
       {
         questionId: 16,
-        question: "כמה דקות יש בשעה?",
+        question: "בתוכנית צילום- מי הצליחה לעשות תמונה הכי טובה של הקפיצה?",
         answers: [
-          { answer: "60", isCorrect: true },
-          { answer: "100", isCorrect: false },
-          { answer: "50", isCorrect: false }
+          { answer: "רבקי שמואל", isCorrect: true },
+          { answer: "חוה אלחדד", isCorrect: false },
+          { answer: "רייזי אורלנציק", isCorrect: false }
         ]
       },
       {
         questionId: 17,
-        question: "כמה ימים יש בשבוע?",
+        question: "משימה: העברנה ביניכן את הכדור 10 פעמים בלי שיפול על הרצפה",
         answers: [
-          { answer: "7", isCorrect: true },
-          { answer: "5", isCorrect: false },
-          { answer: "6", isCorrect: false }
         ]
       },
       {
         questionId: 18,
-        question: "באיזה חודש חוגגים פסח?",
+        question: "הפתעה, מה הכנו לכן?",
         answers: [
-          { answer: "ניסן", isCorrect: true },
-          { answer: "תשרי", isCorrect: false },
-          { answer: "סיון", isCorrect: false }
+          { answer: "טופי בעיגול", isCorrect: true },
+          { answer: "כדור", isCorrect: false },
+          { answer: "סוכריה על מקל", isCorrect: false }
         ]
       }
     ]
@@ -187,58 +176,55 @@ const COLUMNS = [
     questions: [
       {
         questionId: 19,
-        question: "מהו המאכל הלאומי של ישראל?",
+        question: "על מי בתמריצים אמרה המורפולוגית שהיא זריזה?",
         answers: [
-          { answer: "חומוס", isCorrect: true },
-          { answer: "בורגר", isCorrect: false },
-          { answer: "פסטה", isCorrect: false }
-        ]
-      },
-      {
-        questionId: 20,
-        question: "איזה ים נמצא ליד ישראל?",
-        answers: [
-          { answer: "הים התיכון", isCorrect: true },
-          { answer: "הים הכספי", isCorrect: false },
-          { answer: "הים השחור", isCorrect: false }
+          { answer: "פייגא ציפורה ליכטנשטיין", isCorrect: true },
+          { answer: "לייקי ליכטנשטיין", isCorrect: false },
+          { answer: "שורי טייטלבוים", isCorrect: false }
         ]
       },
       {
         questionId: 21,
-        question: "מהי המהירות המותרת בכביש מהיר?",
+        question: "איזו הרצאה דיברה במיוחד על 'במהרה בימינו?",
         answers: [
-          { answer: "110 קמ\"ש", isCorrect: true },
-          { answer: "80 קמ\"ש", isCorrect: false },
-          { answer: "150 קמ\"ש", isCorrect: false }
+          { answer: "הגב ברוריה גרין", isCorrect: true },
+          { answer: "הרב גליצקי", isCorrect: false },
+          { answer: "המורה בוקצ'ין", isCorrect: false }
         ]
       },
       {
         questionId: 22,
-        question: "באיזה אזור זמן ישראל נמצאת?",
+        question: "כמה בנות ממהרות כל יום לסמינר בשעה 8:17?",
         answers: [
-          { answer: "GMT+2", isCorrect: true },
-          { answer: "GMT-5", isCorrect: false },
-          { answer: "GMT+1", isCorrect: false }
+          { answer: "פחות מ-10", isCorrect: true },
+          { answer: "אף אחת", isCorrect: false },
+          { answer: "30% מהתלמידות", isCorrect: false }
         ]
       },
       {
         questionId: 23,
-        question: "מהו הריבוע של 3?",
+        question: "אין מזרזין אלא למזורזין- מה המקור?",
         answers: [
-          { answer: "9", isCorrect: true },
-          { answer: "6", isCorrect: false },
-          { answer: "12", isCorrect: false }
+          { answer: "במקורות", isCorrect: true },
+          { answer: "פתגם", isCorrect: false },
+          { answer: "לא ידוע", isCorrect: false }
         ]
       },
       {
         questionId: 24,
-        question: "מהו אורך נהר הנילוס?",
+        question: "משימה: מוזמנות לבמה על הבימבה לסיבוב מהיר וחזרה פנימה",
         answers: [
-          { answer: "6,650 ק\"מ", isCorrect: true },
-          { answer: "3,500 ק\"מ", isCorrect: false },
-          { answer: "8,000 ק\"מ", isCorrect: false }
         ]
-      }
+      },
+      {
+        questionId: 20,
+        question: "הפתעה: מה הכנו לכן?",
+        answers: [
+          { answer: "שעון", isCorrect: true },
+          { answer: "סוכריות", isCorrect: false },
+          { answer: "חטיף", isCorrect: false }
+        ]
+      },
     ]
   },
   {
@@ -246,56 +232,53 @@ const COLUMNS = [
     questions: [
       {
         questionId: 25,
-        question: "איזה חיה נחשבת למלך היער?",
+        question: "על מי מסופר שעבד ברצינות על אמיצות הלב",
         answers: [
-          { answer: "אריה", isCorrect: true },
-          { answer: "פיל", isCorrect: false },
-          { answer: "טיגריס", isCorrect: false }
+          { answer: "ר' יענקלה גלינסקי", isCorrect: true },
+          { answer: "הסבא מסלבודקא", isCorrect: false },
+          { answer: "החפץ חיים", isCorrect: false }
         ]
       },
       {
         questionId: 26,
-        question: "כמה ימים יש בחודש פברואר?",
+        question: "כל כמה זמן עושים סדר יסודי במגירות המשרד?",
         answers: [
-          { answer: "28 או 29", isCorrect: true },
-          { answer: "30", isCorrect: false },
-          { answer: "31", isCorrect: false }
+          { answer: "אין סדר קבוע", isCorrect: true },
+          { answer: "פעם בשבוע", isCorrect: false },
+          { answer: "פעמיים בשנה", isCorrect: false }
         ]
       },
       {
         questionId: 27,
-        question: "מה שם השפה הרשמית בישראל?",
+        question: "מתי המשרד נפתח בבוקר?",
         answers: [
-          { answer: "עברית", isCorrect: true },
-          { answer: "אנגלית", isCorrect: false },
-          { answer: "ערבית", isCorrect: false }
+          { answer: "08:00", isCorrect: true },
+          { answer: "07:50", isCorrect: false },
+          { answer: "08:15", isCorrect: false }
         ]
       },
       {
         questionId: 28,
-        question: "כמה חודשים יש בשנה עברית?",
+        question: "איזה מורה קוראת שמות ברצינות יתירה?",
         answers: [
-          { answer: "12 או 13", isCorrect: true },
-          { answer: "10", isCorrect: false },
-          { answer: "11", isCorrect: false }
+          { answer: "המורה צלניקר", isCorrect: true },
+          { answer: "המורה גרוסברגר", isCorrect: false },
+          { answer: "המורה שפיץ", isCorrect: false }
         ]
       },
       {
         questionId: 29,
-        question: "מה הוא ההר הגבוה ביותר בעולם?",
+        question: "משימה: עליכן לפנק את צוות המשרד בצורה מעניינת",
         answers: [
-          { answer: "הר האוורסט", isCorrect: true },
-          { answer: "הר האלבורז", isCorrect: false },
-          { answer: "הר ארארט", isCorrect: false }
         ]
       },
       {
         questionId: 30,
-        question: "מה שם המפרץ בו נמצא אילת?",
+        question: "הפתעה: מה הכנו לכן?",
         answers: [
-          { answer: "מפרץ אילת", isCorrect: true },
-          { answer: "מפרץ תל אביב", isCorrect: false },
-          { answer: "מפרץ חיפה", isCorrect: false }
+          { answer: "צרור מפתחות למשרד...", isCorrect: true },
+          { answer: "דפי ממו", isCorrect: false },
+          { answer: "עטים", isCorrect: false }
         ]
       }
     ]
@@ -305,56 +288,53 @@ const COLUMNS = [
     questions: [
       {
         questionId: 31,
-        question: "מהו מספר האיברים בגוף האדם?",
+        question: "כמה בנות בכיתה י' הולכות בשבת עם נעליים לא נוחות [נעלי עקב?]",
         answers: [
-          { answer: "206", isCorrect: true },
-          { answer: "100", isCorrect: false },
-          { answer: "302", isCorrect: false }
+          { answer: "לא ידוע", isCorrect: true },
+          { answer: "8", isCorrect: false },
+          { answer: "יותר מחצי...", isCorrect: false }
         ]
       },
       {
         questionId: 32,
-        question: "מהו המספר הזוגי הכי נמוך?",
+        question: "על אילו שורשים נשען הסמינר שלנו?",
         answers: [
-          { answer: "2", isCorrect: true },
-          { answer: "1", isCorrect: false },
-          { answer: "0", isCorrect: false }
+          { answer: "שתי התשובות נכונות", isCorrect: true },
+          { answer: "החסידות", isCorrect: false },
+          { answer: "האידישקייט", isCorrect: false }
         ]
       },
       {
         questionId: 33,
-        question: "מהו המטבע בישראל?",
+        question: "מה הכי לא נוח לסגנית לעשות בסמינר?",
         answers: [
-          { answer: "שקל חדש", isCorrect: true },
-          { answer: "דולר", isCorrect: false },
-          { answer: "יורו", isCorrect: false }
+          { answer: "לאכזב את התלמידות", isCorrect: true },
+          { answer: "לנעול את השער בבוקר", isCorrect: false },
+          { answer: "לדאוג לסדר ונקיון", isCorrect: false }
         ]
       },
       {
         questionId: 34,
-        question: "מהו הערך של המספר פאי?",
+        question: "באיזו תוכנית ישבו ללא משענת?",
         answers: [
-          { answer: "3.14159", isCorrect: true },
-          { answer: "3.14", isCorrect: false },
-          { answer: "3.5", isCorrect: false }
+          { answer: "בקרוב", isCorrect: true },
+          { answer: "אף פעם", isCorrect: false },
+          { answer: "בשנה שעברה", isCorrect: false }
         ]
       },
       {
         questionId: 35,
-        question: "מי ממציא מנורת החשמל?",
+        question: "משימה: מוזמנות לבמה...",
         answers: [
-          { answer: "תומאס אדיסון", isCorrect: true },
-          { answer: "אלברט איינשטיין", isCorrect: false },
-          { answer: "ניקולה טסלה", isCorrect: false }
         ]
       },
       {
         questionId: 36,
-        question: "איזה אזור נמצא דרומית לישראל?",
+        question: "הפתעה, מה הכנו לכן?",
         answers: [
-          { answer: "מצרים", isCorrect: true },
-          { answer: "לבנון", isCorrect: false },
-          { answer: "סוריה", isCorrect: false }
+          { answer: "משהו נוחות", isCorrect: true },
+          { answer: "מקל סבא להשענות", isCorrect: false },
+          // { answer: "סוריה", isCorrect: false }
         ]
       }
     ]
@@ -364,56 +344,53 @@ const COLUMNS = [
     questions: [
       {
         questionId: 37,
-        question: "מהו מקור השוקולד?",
+        question: "לכמה בנות בסמינר יש אמא גננת?",
         answers: [
-          { answer: "פולי קקאו", isCorrect: true },
-          { answer: "חלב", isCorrect: false },
-          { answer: "תמרים", isCorrect: false }
-        ]
-      },
-      {
-        questionId: 38,
-        question: "מהו חמש של חמש?",
-        answers: [
-          { answer: "25", isCorrect: true },
-          { answer: "10", isCorrect: false },
+          { answer: "7", isCorrect: true },
+          { answer: "9", isCorrect: false },
           { answer: "15", isCorrect: false }
         ]
       },
       {
-        questionId: 39,
-        question: "מהו הצבע של השמש?",
+        questionId: 38,
+        question: "מי המוז'ינקלה בסמינר?",
         answers: [
-          { answer: "צהוב", isCorrect: true },
-          { answer: "כחול", isCorrect: false },
-          { answer: "אדום", isCorrect: false }
+          { answer: "פייגא רחל ליכטנשטיין", isCorrect: true },
+          { answer: "פייגא ציפורה ליכטנשטיין", isCorrect: false },
+          { answer: "פייגא מלכה ליכטנשטיין", isCorrect: false }
         ]
       },
       {
         questionId: 40,
-        question: "מהי הבירה של גרמניה?",
+        question: "לפעמים כיף לי לעשות דברים עם הילד הקטן שבי...",
         answers: [
-          { answer: "ברלין", isCorrect: true },
-          { answer: "מינכן", isCorrect: false },
-          { answer: "פרנקפורט", isCorrect: false }
+          { answer: "נכון", isCorrect: true },
+          { answer: "לא נכון", isCorrect: false },
+          { answer: "תמיד", isCorrect: false }
+        ]
+      },
+      {
+        questionId: 39,
+        question: "כמה שנים קיים 'גן מסיה'?",
+        answers: [
+          { answer: "מאז שאני זוכרת את עצמי...", isCorrect: true },
+          { answer: "10", isCorrect: false },
+          { answer: "4", isCorrect: false }
         ]
       },
       {
         questionId: 41,
-        question: "מהו היבשת שבה נמצאת ישראל?",
+        question: "משימה: נחזור רגע לכישורים הנדרשים בגן...",
         answers: [
-          { answer: "אסיה", isCorrect: true },
-          { answer: "אירופה", isCorrect: false },
-          { answer: "אפריקה", isCorrect: false }
         ]
       },
       {
         questionId: 42,
-        question: "מהו מספר שעות ביום?",
+        question: "הפתעה: מה קנינו לכן?",
         answers: [
-          { answer: "24", isCorrect: true },
-          { answer: "12", isCorrect: false },
-          { answer: "36", isCorrect: false }
+          { answer: "לורדים", isCorrect: true },
+          { answer: "מדבקות", isCorrect: false },
+          { answer: "יצירה", isCorrect: false }
         ]
       }
     ]
@@ -435,13 +412,19 @@ function handleCardClick(questionId) {
   toggleFlipCard(questionId, true);
 
   setTimeout(() => {
-    showAnswersPopup(questionId);
+    const opened = showAnswersPopup(questionId);
+    if (!opened) {
+      toggleAnswersPopup(false);
+    }
 
     // question timeout
     answerTimeOut = setTimeout(() => {
       toggleAnswersPopup(false);
       toggleFlipCard(questionId, false);
       card.classList.remove('active');
+      if (!opened) {
+        toggleFlipCard(questionId, true);
+      }
     }, TIMEOUT_FOR_SINGLE_QUESTION)
   }, TIME_TO_DISPLAY_Q_BEFORE_A);
 }
@@ -489,6 +472,8 @@ function showAnswersPopup(questionId) {
   const answersList = document.querySelector('.answers-popup-content .answers-list');
   const currentQuestion = COLUMNS.map(c=> c.questions).flat().find(q => q.questionId === questionId);
 
+  if (currentQuestion.answers.length === 0) return false;
+
   answersList.innerHTML = ``;
   for (const { answer, isCorrect } of shuffleArray(currentQuestion.answers)) {
     const answerContainer = document.createElement('div');
@@ -498,6 +483,8 @@ function showAnswersPopup(questionId) {
 
     answersList.appendChild(answerContainer);
   }
+
+  return true;
 }
 
 function toggleFlipCard(questionId, state) {
@@ -604,7 +591,7 @@ function startGame() {
             </div>
             <div class="card-face">
               <div class="question-text">${question.question}</div>
-              <div class="question-answer">${question.answers.find(a => a.isCorrect).answer}</div>
+              <div class="question-answer">${question.answers.find(a => a.isCorrect)?.answer || ''}</div>
             </div>
           </div>
         `;
