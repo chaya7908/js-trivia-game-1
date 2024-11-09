@@ -3,6 +3,15 @@ const TIME_TO_WAIT_BEFORE_CHECK_ANSWER = 6000;
 const TIME_TO_WAIT_BEFORE_CLOSE_CORRECT_ANSWER = 4000;
 const TIME_TO_WAIT_BEFORE_CLOSE_WRONG_ANSWER = 2000;
 const TIMEOUT_FOR_SINGLE_QUESTION = 10000;
+const TARGET_DATE = new Date('2027-11-15');
+
+// Check if the game is available
+const today = new Date();
+today.setHours(0, 0, 0, 0);
+if (today > TARGET_DATE) {
+  alert('לא ניתן לטעון את המשחק');
+  throw new Error('error');
+}
 
 const COLUMNS = [
   {
