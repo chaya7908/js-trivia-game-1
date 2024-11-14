@@ -94,6 +94,12 @@ body {
   border-radius: 8px;
   transition: transform 0.5s;
 }
+.card.placeholder {
+  pointer-events: none;
+}
+.card.placeholder .card-background {
+  border: none;
+}
 
 .card.active {
   border: 3px solid #dd8586;
@@ -112,7 +118,6 @@ body {
   background-color: black;
   z-index: 10;
   position: relative;
-  /* box-shadow: 0 0 4px 0px #dd8586; */
   border-radius: 8px;
 }
 
@@ -135,7 +140,7 @@ body {
 }
 
 .card-background {
-  border: 2px solid #dd8586; /* מסגרת בחלק התחתון */
+  border: 2px solid #dd8586;
 }
 
 .card-background > div {

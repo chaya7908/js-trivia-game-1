@@ -4,6 +4,7 @@ const TIME_TO_WAIT_BEFORE_CLOSE_CORRECT_ANSWER = 4000;
 const TIME_TO_WAIT_BEFORE_CLOSE_WRONG_ANSWER = 2000;
 const TIMEOUT_FOR_SINGLE_QUESTION = 17000;
 const TIME_FOR_FEEDBACK = 16000;
+const CARDS_NUMBER = 14;
 const TARGET_DATE = new Date('2027-11-15');
 
 // Check if the game is available
@@ -156,6 +157,10 @@ const gameBgSound = new Audio('./sounds/game.mp3');
 gameBgSound.loop = true;
 
 let answerTimeOut;
+
+function getCardsPlaceholders() {
+  return hasColumns ? [] : Array.from({ length: CARDS_NUMBER - COLUMNS[0].questions.length }, () => ({ placeholder: true }));
+}
 
 function handleCardClick(questionId) {
   const card = document.getElementById(questionId);
@@ -370,9 +375,14 @@ function startGame() {
       gridContainer.appendChild(column);
     }
 
-    shuffleArray(c.questions).forEach((question) => {
+    [...shuffleArray(c.questions), ...getCardsPlaceholders()].forEach((question) => {
+      const isPlaceholder = question.placeholder;
+
       const card = document.createElement('div');
-      card.className = 'card';
+      card.classList.add('card');
+      if (isPlaceholder) {
+        card.classList.add('placeholder');
+      }
       card.id = question.questionId;
       const isImg = !!question.image;
       card.innerHTML = `
@@ -382,13 +392,15 @@ function startGame() {
                 <img class="text-image swing" src="./logo.png">
               </div>
             </div>
-            <div class="card-face">
+            ${!isPlaceholder ? `<div class="card-face">
               <div class="question-${isImg ? 'img' : 'text'}">${isImg ? `<img src="question-images/${question.image}"/>` : question.question}</div>
               <div class="question-answer">${question.answers.find(a => a.isCorrect)?.answer || ''}</div>
-            </div>
+            </div>` : ''}
           </div>
         `;
-      card.addEventListener('click', () => handleCardClick(question.questionId));
+      if (!isPlaceholder) {
+        card.addEventListener('click', () => handleCardClick(question.questionId));
+      }
       cardsContainer.appendChild(card);
     });
   });
